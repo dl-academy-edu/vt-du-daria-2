@@ -87,23 +87,23 @@
 
 .pages_prev,
 .pages_prev:hover {
-  background-image: url("/../../images/next-prev-pages.png");
+  background-image: url("/../../static/images/next-prev-pages.png");
   background-repeat: no-repeat;
   transform: rotate(-180deg);
 }
 
 .pages_prev:hover {
-  background-image: url("/../../images/next-prev-hov.png");
+  background-image: url("/../../static/images/next-prev-hov.png");
 }
 
 .pages_next,
 .pages_next:hover {
-  background-image: url("/../../images/next-prev-pages.png");
+  background-image: url("/../../static/images/next-prev-pages.png");
   background-repeat: no-repeat;
 }
 
 .pages_next:hover {
-  background-image: url("/../../images/next-prev-hov.png");
+  background-image: url("/../../static/images/next-prev-hov.png");
 }
 
 .pages_prev:active,
