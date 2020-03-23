@@ -1,28 +1,71 @@
-// Подключение компонентов
-@import "./header/header";
-@import "./footer/footer";
 
-body {
-  font-family: Oswald, sans-serif;
+/* Global styles */
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700/Montserrat:400,700,900/Open+Sans:400,700/Roboto:400,700,900&display=swap");
+
+body { 
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  background-color: #F4F4F4;
+}
+
+a { 
+  text-decoration: none; 
+}
+
+html { 
+  box-sizing: border-box; 
+}
+
+*, 
+*::before,
+*::after { 
+  box-sizing: inherit; 
+}
+
+img { 
+  max-width: 100%;
+}
+
+.container-back {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; 
+
+  background-color: #FFFFFF;
 }
 
 .container {
   width: 100%;
-  max-width: 1180px;
-  margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
+  max-width: 1220px;
+  padding: 0 20px;
+  margin: 0 auto; 
 }
 
-.title-block {
-  margin: 0 0 20px 0;
-
-  &_one {
-    font-size: 30px;
-    text-transform: uppercase;
-  }
-  &_two {
-    font-size: 25px;
-    max-width: 500px;
-  }
+.hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px); /* IE6, IE7 */
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important; 
+  width: 1px !important; 
+  overflow: hidden;
 }
+
+.title {
+  padding-bottom: 4px;
+  padding-top: 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+}
+
+//connecting components
+@import "./header/header";
+@import "./breadcrumbs/breadcrumbs";
+@import "./button/button";
+@import "./link-button/link-button";
+@import "./footer/footer";

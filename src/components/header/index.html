@@ -1,10 +1,26 @@
-<header>
-  <div class="container">
-    <span class="title-block title-block_one">
-      Header
-    </span>
-    <a href="/">Главная</a>
-    <a href="/pages/catalog">Каталог</a>
-    <a href="/pages/toys">Игрушки</a>
+<header class="header-main container-back">
+  <div class="header container">
+    <a class="header__logo no_active" href="/">
+      <img class="header__img-logo" src="/static/images/logo.png" alt="logo">
+    </a>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li>
+          <!-- @@include('link-header/index.html',{
+            "text": "BLOG",
+            "href": "/pages/blog/index.html"
+            "class": "header__nav-item no_active"
+          }) -->
+        <a class="header__nav-item no_active" href="/pages/blog/index.html">BLOG</a>
+        </li>
+        <li><a class="header__nav-item no_active" href="/pages/catalog/index.html">CATALOG</a></li>
+        <li><a class="header__nav-item no_active" href="/pages/toys/index.html">TOYS</a></li>
+        <li><a class="header__nav-item" href="#">ABOUT US</a></li>
+      </ul>
+      <ul class="header__nav-list_links">
+        <li><a class="header__nav-item" href="#"><img src="/static/images/search.png" alt="Search"/></a></li>
+        <li><a class="header__nav-item_link-bold" href="/pages/contact-us/index.html">CONTACT US</a></li>
+      </ul>
+    </nav>
   </div>
 </header>

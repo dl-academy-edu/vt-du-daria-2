@@ -1,24 +1,82 @@
-header {
-  background-color: #89f7fe;
-  height: 80px;
-  display: flex;
-  align-items: center;
-
-  span {
-    padding-right: 20px;
-  }
-
-  a {
-    color: #000;
-    text-decoration: none;
-
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-    &:hover {
-      border-bottom: 1px solid #000;
-    }
-  }
+.title {
+  padding-bottom: 4px;
+  padding-top: 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
 }
 
+.header {
+  display: flex;
+  padding: 49px 20px 36px;
+  align-items: center;
+}
 
+.header__logo {
+  min-width: 100px;
+  height: 52px;
+}
+
+.header__logo:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+li span[class="header__nav-item"]:hover {
+  opacity: 1;
+}
+
+.header__nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav-list,
+.header__nav-list_links {
+  list-style-type: none;
+}
+
+.header__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-left: 60px;
+}
+
+.header__nav-list_links {
+  list-style-type: none;
+  display: flex;
+  padding-top: 3px; 
+}
+
+.header__nav-item {
+  padding-right: 20px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #1E0606;
+}
+
+.header__nav-item:hover {
+  opacity: 0.5;
+}
+
+span.header__nav-item:hover > .not_active {
+  opacity: 1;
+}
+
+.header__nav-item_link-bold {
+  margin-left: 2px; 
+  margin-right: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  color: #1E0606;
+}
+
+.header__nav-item_link-bold:hover {
+  opacity: 0.5;
+}
