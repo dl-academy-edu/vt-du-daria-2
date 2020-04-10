@@ -22,8 +22,8 @@
 
       <section class="contact container">
         <h2 class="hidden">contact</h2>
-        <div class="contact-bg">
-          <form class="contact-window " action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+        <div class="contact-window">
+          <form class="contact-window__form" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
             <label class="contact-window__label" for="user-name"> Name</label>
             <input class="contact-window__input" id="user-name" type="text" name="name" placeholder="Ivan Ivanov">
             
@@ -68,6 +68,6 @@
       </section>
     </main>
     @@include('footer/index.html')
-    <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

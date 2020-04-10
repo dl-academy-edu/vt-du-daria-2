@@ -1,3 +1,8 @@
+.header .no-active-4 {
+  opacity: 1; 
+  cursor: default;
+}
+
 .contact {
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +15,7 @@
     line-height: 16px;
   }
   
-  .contact-window {
+  .contact-window__form {
     display: flex;
     flex-direction: column;
     position: relative;

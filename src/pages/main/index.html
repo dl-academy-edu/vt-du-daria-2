@@ -17,7 +17,7 @@
         <div class="slider__header">
           <div class="slider__nav">
             <p class="slider__nav-text">01</p>
-            <button class="slider__nav-button active"></button>
+            <button class="slider__nav-button slider__nav-button_active"></button>
             <button class="slider__nav-button"></button>
             <button class="slider__nav-button"></button>
             <button class="slider__nav-button"></button>
@@ -26,6 +26,7 @@
           <div class="slider__header-title">
             <h2 class="slider__title">THE OOH NOO COLLECTION</h2>
             <p class="slider__text">Designed in Slovenia</p>
+
             @@include('link-button/index.html',{
               "text": "EXPLORE NOW",
               "href": "#",
@@ -33,9 +34,9 @@
             })
           </div>
   
-          <img class="slider__link-bg" src="/../../static/images/monster.png" alt="monster in a wheelbarrow">
+          <img class="slider__img-bg" src="/../../static/images/monster.png" alt="monster in a wheelbarrow">
         </div>
-        <div class="slider__text_addit">
+        <div class="slider__text-addit">
           Free (continental) USA shipping on all orders of $100 USD or more!
         </div>
       </section>
@@ -65,17 +66,17 @@
           </li>
         </ul>
 
-        <div class="goods__slider">
-          <div class="goods__slider-nav">
-            <button type="button" class="goods__slider-prev">
+        <div class="goods-slider__slider">
+          <div class="goods-slider__slider-nav">
+            <button class="goods-slider__button-prev" type="button" >
               <img class="img-button" src="/../../static/images/vector-prev.png" alt="button-prev">
             </button>
-            <button type="button" class="goods__slider-next">
+            <button class="goods-slider__button-next" type="button">
               <img class="img-button" src="/../../static/images/vector-next.png" alt="button-next">
             </button>
           </div>
 
-          <div class="goods__slider-content">
+          <div class="goods-slider__slider-content">
             Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.
           </div>
         </div>
@@ -88,9 +89,9 @@
             <h2 class="additional-inform__title">DELIVERY</h2>
   
             <div class="additional-inform__menu">
-              <button type="button" class="additional-inform__menu-button active">Delivery</button>
-              <button type="button" class="additional-inform__menu-button">Guarantee</button>
-              <button type="button" class="additional-inform__menu-button">Credit</button>
+              <button type="button" class="additional-inform__button additional-inform__button_active">Delivery</button>
+              <button type="button" class="additional-inform__button">Guarantee</button>
+              <button type="button" class="additional-inform__button">Credit</button>
             </div>
   
             <div class="additional-inform__content">
@@ -98,6 +99,7 @@
                 shocked that four years have flown by. It's simply magical.</p>
               <p class="additional-inform__text">What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly happy place
                 for me and i have you and all of the beautiful designers that we work with to thank!</p>
+
                 @@include('link-button/index.html',{
                   "text": "LEARN MORE",
                   "href": "#",
@@ -134,7 +136,7 @@
       </section>
 
       <section class="about-us container">
-        <div class="about-us__block inform-1">
+        <div class="about-us__block-inform-1">
           <h3 class="about-us__title">DESIGN LIFE KIDS</h3>
           <button class="about-us__button" type="button">About Us</button>
           <p class="about-us__text">
@@ -149,7 +151,7 @@
           })
         </div>
 
-        <div class="about-us__block inform-2">
+        <div class="about-us__block-inform-2">
           <h3 class="about-us__title">CONTACTS</h3>
           <p class="about-us__text">
             Some days i feel like i've been working on dlk my entire life and 
@@ -195,9 +197,9 @@
           "type": "submit",
           "value": "submit"
         })
-        <button class="modal-window__button_to_close modal-window__button_to_close_js" type="button" value="closed"></button>
+        <button class="modal-window__button-close modal-window__button-close_js" type="button" value="closed"></button>
       </form>
     </div>
-    <script src="scripts.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

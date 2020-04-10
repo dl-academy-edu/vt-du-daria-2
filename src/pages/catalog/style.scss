@@ -1,29 +1,57 @@
-.goods__list-item,
-.goods__hidden  {
-  list-style-type: none;
+%secondary-fonts {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+}
+
+.header .no-active-2 {
+  opacity: 1; 
+  cursor: default;
 }
 
 .goods {
   padding: 15px 0 13px;
-}
 
-.goods__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
 
-.goods__list-item {
-  margin: 23px 10px 0;
-}
+  &__list-item {
+    margin: 23px 10px 0;
 
-.goods__list-item:hover {
-  text-decoration: underline;
-}
+    &:hover {
+      text-decoration: underline;
+    }
 
-.goods__list-item:nth-child(4) {
-  margin-left: 218px;
+    &:nth-child(4) {
+      margin-left: 218px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 270px;
+    width: 280px;
+    @extend %secondary-fonts;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    color: #FFFFFF;
+    text-shadow: 0 0 40px rgba(147, 3, 3, 0.25);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__link-title {
+    display: block;
+    width: 160px; 
+    margin: 0 auto;
+  }
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -33,33 +61,29 @@
   }
 }
 
-.goods__link {
-  display: flex;
-  align-items: center;
-  height: 270px;
-  width: 280px;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 32px;
-  color: #FFFFFF;
-  text-shadow: 0 0 40px rgba(147, 3, 3, 0.25);
-  text-align: center;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.goods__link-title {
-  display: block;
-  width: 160px; 
-  margin: 0 auto;
-}
-
 .additional-inform {
   width: 720px;
   padding: 0 20px 65px;
   margin-left: 290px;
+  
+  &__title {
+    margin: 0;
+    padding-top: 39px;
+    @extend %secondary-fonts;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  &__content {
+    padding-top: 5px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__text {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -75,24 +99,4 @@
     padding-top: 5px;
     padding-right: 10px;
   }
-}
-
-.additional-inform__title {
-  margin: 0;
-  padding-top: 39px;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 46px;
-}
-
-.additional-inform__content {
-  padding-top: 5px;
-  font-size: 16px;
-  line-height: 22px;
-}
-
-.additional-inform__text {
-  margin-bottom: 0;
 }

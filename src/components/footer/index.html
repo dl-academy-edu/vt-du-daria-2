@@ -26,30 +26,30 @@
 
     <div class="footer__user-connect">
       <p class="footer__titles">Connect</p>
-
-      <form class="footer__input" action="URL">
-        <input class="footer__input-email" type="email" name="email" placeholder="Email"><!--
+      
+      <form class="email-form" action="URL">
+        <input class="email-form__input" type="email" name="email" placeholder="Email"><!--
       -->@@include('button/index.html',{
         "text": "JOIN",
-        "class": "footer__button-join",
+        "class": "email-form__button-join",
         "type": "submit",
         "value": "join"
       })
       </form>
 
-      <div class="footer__social">
-        <ul class="footer__social-list">
-          <li><a class="footer__social-item" href="#">
-            <img class="footer__img" src="/static/images/facebook.png" alt="Facebook"></a>
+      <div class="social">
+        <ul class="social__list">
+          <li><a class="social__item" href="#">
+            <img src="/static/images/facebook.png" alt="Facebook"></a>
           </li>
-          <li><a class="footer__social-item" href="#">
-            <img class="footer__img" src="/static/images/twitter.png" alt="Twitter"></a>
+          <li><a class="social__item" href="#">
+            <img src="/static/images/twitter.png" alt="Twitter"></a>
           </li>
-          <li><a class="footer__social-item" href="#">
-            <img class="footer__img" src="/static/images/pinterest.png" alt="Pinterest"></a>
+          <li><a class="social__item" href="#">
+            <img src="/static/images/pinterest.png" alt="Pinterest"></a>
           </li>
-          <li><a class="footer__social-item" href="#">
-            <img class="footer__img" src="/static/images/instagram.png" alt="Instagram"></a>
+          <li><a class="social__item" href="#">
+            <img src="/static/images/instagram.png" alt="Instagram"></a>
           </li>
         </ul>
       </div>
@@ -57,37 +57,38 @@
   </div>
 
   <div class="footer__additional">
-    <div class="footer__success"> 
-      <form class="footer__success-list footer__success-list_js">
-        <input class="footer__input-star hidden" id="star-5" type="radio" name="rating" value="5">
-        <label class="footer__lable-star" for="star-5" title="Оценка «5»">
+    <div class="success"> 
+      <form class="success__list">
+        <input class="success__input hidden" id="star-5" type="radio" name="rating" value="5">
+        <label class="success__lable" for="star-5" title="Оценка «5»">
           <img class="star" src="/static/images/star.png" alt="star">
         </label>
-        <input class="footer__input-star hidden" id="star-4"  type="radio" name="rating" value="4">
-        <label class="footer__lable-star" for="star-4" title="Оценка «4»">
+        <input class="success__input hidden" id="star-4"  type="radio" name="rating" value="4">
+        <label class="success__lable" for="star-4" title="Оценка «4»">
           <img class="star" src="/static/images/star.png" alt="star" >
         </label>
-        <input class="footer__input-star hidden" id="star-3" type="radio" name="rating" value="3">
-        <label class="footer__lable-star" for="star-3" title="Оценка «3»">
+        <input class="success__input hidden" id="star-3" type="radio" name="rating" value="3">
+        <label class="success__lable" for="star-3" title="Оценка «3»">
+          <img class="success__star" src="/static/images/star.png" alt="star">
+        </label>
+        <input class="success__input hidden" id="star-2" type="radio" name="rating" value="2">
+        <label class="success__lable" for="star-2" title="Оценка «2»">
           <img class="star" src="/static/images/star.png" alt="star">
         </label>
-        <input class="footer__input-star hidden" id="star-2" type="radio" name="rating" value="2">
-        <label class="footer__lable-star" for="star-2" title="Оценка «2»">
+        <input class="success__input hidden" id="star-1" type="radio" name="rating" value="1">
+        <label class="success__lable" for="star-1" title="Оценка «1»">
           <img class="star" src="/static/images/star.png" alt="star">
         </label>
-        <input class="footer__input-star hidden" id="star-1" type="radio" name="rating" value="1">
-        <label class="footer__lable-star" for="star-1" title="Оценка «1»">
-          <img class="star" src="/static/images/star.png" alt="star">
-        </label>
-        <p class="footer__success-title">Company Rating</p>
+        <p class="success__title">Company Rating</p>
       </form>
     </div> 
 
-    <div class="footer__copyr">
+    <div class="copyr">
       <p >Copyright &#169; 2018 Dlk • Design Life Kids</p>
     </div>
-    <div class="footer__web-design">
-      <a class="footer__link" href="#">Web Design — Direct Line Development</a>
+
+    <div class="web-design">
+      <a class="web-design__link" href="#">Web Design — Direct Line Development</a>
     </div>
   </div>
 </footer>

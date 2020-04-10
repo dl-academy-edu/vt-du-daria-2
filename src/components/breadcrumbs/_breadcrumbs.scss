@@ -8,23 +8,23 @@
   font-weight: normal;
   font-size: 20px;
   line-height: 25px;
-}
 
-.breadcrumbs__img {
-  height: 12px;
-  width: 8px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
+  &__img {
+    height: 12px;
+    width: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
-.breadcrumbs__link {
-  color: #1E0606;
-}
+  &__link {
+    color: #1E0606;
 
-.breadcrumbs__link:hover {
-  opacity: 0.75;
-}
+    &:hover {
+      opacity: 0.75;
+    }
+  }
 
-.breadcrumbs__current-page {
-  opacity: 0.5;
+  &__current-page {
+    opacity: 0.5;
+  }
 }

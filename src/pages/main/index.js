@@ -1,6 +1,6 @@
 var modal = document.querySelector(".modal-bg_js");
 var buttonOpen = document.querySelector(".slider__link_js");
-var buttonClose = document.querySelector(".modal-window__button_to_close_js");
+var buttonClose = document.querySelector(".modal-window__button-close_js");
 var input = document.querySelector(".modal-window__input_js");
 
 buttonOpen.addEventListener("click", function(){
