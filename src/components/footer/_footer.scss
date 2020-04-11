@@ -55,6 +55,7 @@ $background-color:#434343;
     margin-bottom: 16px;
     color: $color_text;
     background-color: $background-color;
+    transition: $transition-duration;
   
     &:hover {
       opacity: 0.5;
@@ -100,6 +101,7 @@ $background-color:#434343;
     background-color: #666666;
     outline: none;
     border: 1px solid transparent; 
+    transition: $transition-duration;
   
     &:hover {
       border-color: #FFFFFF; 
@@ -109,6 +111,7 @@ $background-color:#434343;
       background-color: #FFFFFF;
       color: #000000;
     }
+
     &::placeholder {
       color: #FFFFFF;
     }
@@ -129,6 +132,7 @@ $background-color:#434343;
   }
 
   &__item:hover {
+    transition: $transition-duration;
     opacity: 0.5;
   }
 }
@@ -152,12 +156,12 @@ $background-color:#434343;
     > input:hover ~ label,
     > input:checked ~ label {
       content:url("/static/images/star-hover.png");
-      margin-bottom: 2px;
+      margin-bottom: 3px;
       cursor: pointer;
     }
 
     > input:checked ~ label {
-      content:url("/static/images/star-focus.png");
+      content:url("static/images/star-focus.png");
     }
 
     > input:focus ~ label {
@@ -168,6 +172,7 @@ $background-color:#434343;
     label:hover ~ p,
     input:checked ~ p {
       color: #C29974;
+      transition: $transition-duration;
     }
   }
 
@@ -183,13 +188,13 @@ $background-color:#434343;
 
 .web-design {
   @extend %style-addit;
-  
+    
   &__link {
     color: #AAAAAA;
-  }
-
-  &__link:hover {
-    text-decoration: underline;
-    color: $color_text;
+    &:hover {
+      transition: $transition-duration;
+      text-decoration: underline;
+      color: $color_text;
+    }
   }
 }

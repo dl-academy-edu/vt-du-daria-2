@@ -17,9 +17,10 @@
     line-height: 20px;
     color: #1E0606;
   }
-  
+
   &__link {
     color: #1E0606;
+    transition: $transition-duration;
 
     &:hover {
       color: #C29974;
@@ -34,7 +35,8 @@
     background-image: url("/../../static/images/next-prev-pages.png");
     background-repeat: no-repeat;
     transform: rotate(-180deg);
-  
+    transition: background-image $transition-duration;
+
     &:hover {
       background-image: url("/../../static/images/next-prev-hov.png");
     }
@@ -47,7 +49,8 @@
   &__next {
     background-image: url("/../../static/images/next-prev-pages.png");
     background-repeat: no-repeat;
-      
+    transition: background-image $transition-duration;
+    
     &:hover {
       background-image: url("/../../static/images/next-prev-hov.png");
     }

@@ -4,6 +4,8 @@
   font-style: normal;
 }
 
+$transition-duration: .8s;
+
 .header .no-active {
   opacity: 1; 
   cursor: default;
@@ -141,10 +143,6 @@
 
   &__list-item {
     margin-top: 30px;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   &__link {
@@ -161,6 +159,11 @@
     text-align: center;
     background-repeat: no-repeat;
     background-position: center;
+   
+    &:hover {
+      transition: $transition-duration;
+      text-decoration: underline;
+    }
   }
 
   &__link-title {
@@ -190,9 +193,10 @@
     background: rgba(112, 187, 220, 0.2);
     cursor: pointer;
     border: none;
+    transition: $transition-duration;
 
     &:hover {
-      opacity: 0.75;
+      opacity: 0.55;
     }
   }
 
@@ -204,9 +208,10 @@
     background: rgba(112, 187, 220, 0.2);
     border: none;
     cursor: pointer;
+    transition: $transition-duration;
 
     &:hover {
-      opacity: 0.75;
+      opacity: 0.5;
     }
   }
 
@@ -261,14 +266,16 @@
     background-color: #FFFFFF;
     border: none;
     cursor: pointer;
+    
 
     &:hover, &:focus {
+      transition: background-color $transition-duration;
       display: flex;
       padding-left: 60px;
       margin-left: -60px;
       width: 325px;
       height: 55px;
-      background: rgba(112, 187, 220, 0.2);
+      background-color: rgba(112, 187, 220, 0.2);
     }
   }
 
@@ -361,6 +368,7 @@
     background: #E1F0F7;
     border: none;
     cursor: pointer;
+    transition: $transition-duration;
 
     &:hover {
       opacity: 0.75;
@@ -425,6 +433,8 @@
     margin-bottom: 20px;
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.2);
+
+    transition: box-shadow $transition-duration;
   
     &:hover, &:active {
       box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3) inset;
@@ -501,6 +511,7 @@
     }
 
     &:hover {
+      transition: $transition-duration;
       opacity: 0.5;
     }
 

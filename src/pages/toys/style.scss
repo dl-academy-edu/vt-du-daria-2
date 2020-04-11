@@ -1,12 +1,3 @@
-.header .no-active-3 {
-  opacity: 1; 
-  cursor: default;
-}
-
-fieldset {
-  border: none;
-}
-
 %padding-margin {
   padding: 0;
   margin: 0;
@@ -14,6 +5,17 @@ fieldset {
 
 %font-title {
   font-weight: bold;
+}
+
+$transition-duration: .4s;
+
+.header .no-active-3 {
+  opacity: 1; 
+  cursor: default;
+}
+
+fieldset {
+  border: none;
 }
 
 .selection {
@@ -214,10 +216,12 @@ fieldset {
   &__input:active + &__text, 
   &__input:focus + &__text {
     background-color: #F3D0DB;
+    
   }
 
   &__input:hover + &__text {
     background-color: #EDDEEB;
+    transition: background-color $transition-duration;
   }
   
   &__input:focus + &__text {
@@ -265,8 +269,7 @@ fieldset {
     color: #1E0606;
   }
 
-  &__link:hover > &__hover::before {
-    content: "LEAN MORE";
+  &__hover {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -282,11 +285,19 @@ fieldset {
     font-weight: bold;
     font-size: 26px;
     background-color: #E5EAF8;;
-    opacity: 0.9;
+    opacity: 0;
+    transition: $transition-duration;
   }
 
-  &__link:active > &__hover::before {
+  &__link:hover > &__hover {
+    opacity: 0.9;
+    transition: $transition-duration;
+  }
+
+
+  &__link:active > &__hover {
     opacity: 0.67;
+    transition: $transition-duration;
   }
   
   &__price {

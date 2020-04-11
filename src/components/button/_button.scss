@@ -10,11 +10,13 @@
   border: none;
   cursor: pointer;
 
+  transition: background-color $transition-duration;
+
   &:hover {
-    background: #C29974;
+    background-color: #C29974;
   }
   
   &:active {
-    background: #CFAF91;
+    background-color: #CFAF91;
   }
 }

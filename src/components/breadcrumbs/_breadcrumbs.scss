@@ -18,6 +18,7 @@
 
   &__link {
     color: #1E0606;
+    transition: color $transition-duration;
 
     &:hover {
       opacity: 0.75;

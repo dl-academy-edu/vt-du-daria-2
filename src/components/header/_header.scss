@@ -11,6 +11,7 @@
   &__logo {
     min-width: 100px;
     height: 52px;
+    transition: $transition-duration;
     
     &:hover {
       opacity: 0.5;
@@ -37,6 +38,7 @@
     font-size: 14px;
     line-height: 19px;
     color: #1E0606;
+    transition: $transition-duration;
 
     &:hover {
       opacity: 0.5;
@@ -50,6 +52,7 @@
 
   &__link-search {
     padding-right: 23px;
+    transition: $transition-duration;
 
     &:hover {
       opacity: 0.5;
@@ -61,6 +64,7 @@
     font-size: 14px;
     line-height: 19px;
     color: #1E0606;
+    transition: $transition-duration;
 
     &:hover {
       opacity: 0.5;
