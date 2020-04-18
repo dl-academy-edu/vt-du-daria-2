@@ -1,3 +1,5 @@
+@import './consts';
+
 %flex-and-center {
   display: flex;
   align-items: center;
@@ -26,18 +28,18 @@
     
   }
 
-  &__nav-list {
+  &__list {
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
     margin-left: 60px;
   }
 
-  &__nav-item {
+  &__item {
     padding-right: 20px;
-    font-size: 14px;
+    font-size: $fs_text-header;
     line-height: 19px;
-    color: #1E0606;
+    color: $color_text-header;
     transition: $transition-duration;
 
     &:hover {
@@ -50,7 +52,7 @@
     padding-top: 3px; 
   }
 
-  &__link-search {
+  &__search {
     padding-right: 23px;
     transition: $transition-duration;
 
@@ -59,11 +61,11 @@
     }
   }
 
-  &__link-contact {
+  &__contact {
     font-weight: bold;
     font-size: 14px;
     line-height: 19px;
-    color: #1E0606;
+    color: $color_text-header;
     transition: $transition-duration;
 
     &:hover {

@@ -1,8 +1,4 @@
-
-.header .no-active-1 {
-  opacity: 1; 
-  cursor: default;
-}
+@import "../../components/consts";
 
 .announce {
   padding-top: 28px;
@@ -14,19 +10,19 @@
     padding-left: 0;
   }
 
-  &__list-item {
+  &__item {
     width: 380px;
   }
 
-  &__img-bg {
+  &__img {
     padding-bottom: 17px
   }
 
   &__date {
-    font-family: 'Roboto', sans-serif;
+    font-family: $third-font;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: $fs-primary;
     line-height: 19px;
     color: #818181;
   }
@@ -35,10 +31,10 @@
     margin: 0;
     padding-top: 10px;
     padding-bottom: 15px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $secondary-font;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
+    font-size: $fs-blog-title;
     line-height: 31px;
     color: #1E0606;
   }
@@ -46,7 +42,7 @@
   &__text {
     margin: 0;
     padding-bottom: 40px;
-    font-size: 18px;
+    font-size: $fs-blog-text;
     line-height: 25px;
     color: #1E0606;
   }

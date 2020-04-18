@@ -1,6 +1,4 @@
-
-$color_text:#FFFFFF;
-$background-color:#434343;
+@import './consts';
 
 %style-addit {
   display: flex;
@@ -8,16 +6,22 @@ $background-color:#434343;
   padding-top: 7px;
 }
 
+%padding-margin {
+  padding: 0;
+  margin: 0;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  font-size: 16px;
+  font-family: $primary-font;
+  font-size: $fs-primary;
   line-height: 22px;
-  background-color: $background-color;
+  background-color: $bg-color_footer;
 
-  &__nav-connect {
+  &__connect {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -30,12 +34,11 @@ $background-color:#434343;
 
   &__titles {
     color: #AAAAAA;
+    @extend %padding-margin;
   }
 
-  &__titles, 
-  &__nav-list {
-    padding: 0;
-    margin: 0;
+  &__list {
+    @extend %padding-margin;
   }
   
   &__titles::after {
@@ -50,11 +53,11 @@ $background-color:#434343;
     border: none;
   }
 
-  &__nav-item {
+  &__item {
     display: inline-block;
     margin-bottom: 16px;
-    color: $color_text;
-    background-color: $background-color;
+    color: $color_text-footer;
+    background-color: $bg-color_footer;
     transition: $transition-duration;
   
     &:hover {
@@ -66,7 +69,7 @@ $background-color:#434343;
     }
   }
 
-  &__user-connect {
+  &__user {
     display:flex;
     flex-direction: column;
     width: 380px;
@@ -139,7 +142,7 @@ $background-color:#434343;
 
 .success {
   @extend %style-addit;
-  color: $color_text;
+  color: $color_text-footer;
 
   &__list {
     display: flex;
@@ -151,21 +154,22 @@ $background-color:#434343;
     > label {
       margin-left: 5px;
       cursor: pointer;
+      margin-top: 5px;
+      fill: #FFFFFF;
     }
-
+    
     > input:hover ~ label,
     > input:checked ~ label {
-      content:url("/static/images/star-hover.png");
-      margin-bottom: 3px;
+      fill: #836E5B;;
       cursor: pointer;
     }
 
     > input:checked ~ label {
-      content:url("static/images/star-focus.png");
+      fill:#C29974;
     }
 
     > input:focus ~ label {
-      box-shadow: 0px 0px 0px 1.5px #79ABFE inset;
+      box-shadow: 0 0 0 1.5px #79ABFE inset;
       border-radius: 2px;
     }
 
@@ -177,13 +181,13 @@ $background-color:#434343;
   }
 
   &__title {
-    margin-right: 27px;
+    margin-right: 12px;
   }
 }
 
 .copyr {
   @extend %style-addit;
-  color: $color_text;
+  color: $color_text-footer;
 }
 
 .web-design {
@@ -194,7 +198,7 @@ $background-color:#434343;
     &:hover {
       transition: $transition-duration;
       text-decoration: underline;
-      color: $color_text;
+      color: $color_text-footer;
     }
   }
 }

@@ -1,8 +1,11 @@
+@import './consts';
+
 .button {
   display: block; 
   padding: 9px;
   font-weight: bold;
-  font-size: 16px;
+  font-family: $primary-font;
+  font-size: $fs-primary;
   line-height: 22px;
   text-align: center;
   color: #FFFFFF;

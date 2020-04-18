@@ -1,15 +1,4 @@
-
-%secondary-fonts {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-}
-
-$transition-duration: .8s;
-
-.header .no-active {
-  opacity: 1; 
-  cursor: default;
-}
+@import "../../components/consts";
 
 .slider {
   display: flex;
@@ -28,41 +17,41 @@ $transition-duration: .8s;
     display: flex;
     flex-direction: column;
     padding: 0 31px;
+
+    &-text {
+      height: 74px;
+      width: 61px;
+      margin: 0 0 15px;
+      padding: 17px 0;
+      font-family: $secondary-font;
+      font-size: 60px;
+      line-height: 73px;
+      color: rgba(30, 6, 6, 0.05);
+    }
+
+    &-button {
+      width: 31px;
+      margin-top: 11px;
+      padding-top: 2px;
+      padding-bottom: 1px;
+      background: #D6CAC2;
+      border: none;
+      cursor: pointer;
+  
+      &:active, &:hover, &:focus {
+        background: rgba(30, 6, 6, 0.6);
+        border: none;
+        outline: none;
+      }
+    }
+
+    &-button_active{
+      background: rgba(75, 71, 71, 0.6);
+      border: none;
+    }
   } 
 
-  &__nav-text {
-    height: 74px;
-    width: 61px;
-    margin: 0 0 15px;
-    padding: 17px 0;
-    @extend %secondary-fonts;
-    font-size: 60px;
-    line-height: 73px;
-    color: rgba(30, 6, 6, 0.05);
-  }
-
-  &__nav-button {
-    width: 31px;
-    margin-top: 11px;
-    padding-top: 2px;
-    padding-bottom: 1px;
-    background: #D6CAC2;
-    border: none;
-    cursor: pointer;
-
-    &:active, &:hover, &:focus {
-      background: rgba(30, 6, 6, 0.6);
-      border: none;
-      outline: none;
-    }
-  }
-
-  &__nav-button_active{
-    background: rgba(75, 71, 71, 0.6);
-    border: none;
-  }
-
-  &__header-title {
+  &__title {
     display: flex;
     flex-direction: column;
     width: 307px;
@@ -70,18 +59,18 @@ $transition-duration: .8s;
     margin-left: 10px;
   }
 
-  &__title {
+  &__item {
     margin: 0;
-    @extend %secondary-fonts;
+    font-family: $secondary-font;
     font-weight: bold;
-    font-size: 40px;
+    font-size: $fs-slider;
     line-height: 110%;
   }
 
   &__text {
     margin: 0;
     padding: 16px 0 24px;
-    font-family:'Crimson Text', serif;
+    font-family: $four-font;
     font-style: italic;
     font-size: 20px;
     line-height: 25px;
@@ -91,7 +80,7 @@ $transition-duration: .8s;
     width: 161px;
   }
 
-  &__img-bg {
+  &__img {
     position: relative;
     width: 635px;
     height: 461px;
@@ -103,6 +92,7 @@ $transition-duration: .8s;
     min-height: 39px;
     padding: 13px 0 12px;
     font-weight: bold;
+    font-family: $primary-font;
     font-size: 12px;
     line-height: 16px;
     text-align: center;
@@ -113,7 +103,7 @@ $transition-duration: .8s;
 }
 
 @media screen and (max-width: 1200px) {
-  .slider__img-bg {
+  .slider__img {
     margin-top: 50px;
   }
 }
@@ -126,9 +116,9 @@ $transition-duration: .8s;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 2px;
-    @extend %secondary-fonts;
+    font-family: $secondary-font;
     font-weight: bold;
-    font-size: 38px;
+    font-size: $fs-title;
     line-height: 46px;
   }
 
@@ -141,7 +131,7 @@ $transition-duration: .8s;
     padding-left: 0;
   }
 
-  &__list-item {
+  &__item {
     margin-top: 30px;
   }
 
@@ -150,75 +140,90 @@ $transition-duration: .8s;
     align-items: center;
     height: 270px;
     width: 280px;
-    @extend %secondary-fonts;
+    font-family: $secondary-font;
     font-weight: bold;
-    font-size: 26px;
+    font-size: $fs-title-link;
     line-height: 32px;
     color: #FFFFFF;
     text-shadow: 0 0 40px rgba(147, 3, 3, 0.25);
     text-align: center;
     background-repeat: no-repeat;
     background-position: center;
-   
+
+    &-title {
+      display: block;
+      width: 160px;
+      margin: 0 auto;
+    }
+
     &:hover {
-      transition: $transition-duration;
       text-decoration: underline;
     }
-  }
-
-  &__link-title {
-    display: block;
-    width: 160px;
-    margin: 0 auto;
-  }
+  } 
 }
 
 .goods-slider {
   &__slider {
     display: flex;
     padding-top: 30px;
-    font-size: 16px;
+    font-family: $primary-font;
+    font-size: $fs-primary;
     line-height: 22px;
+    margin-bottom: 6px;
   }
 
   &__slider-nav {
     padding-top: 3px;
+    position: relative;
   }
 
-  &__button-prev {
-    width: 37px;
-    height: 37px;
-    padding: 3px 6px;
-    margin-bottom: 6px;
-    background: rgba(112, 187, 220, 0.2);
-    cursor: pointer;
-    border: none;
-    transition: $transition-duration;
-
-    &:hover {
-      opacity: 0.55;
-    }
-  }
-
-  &__button-next {
-    align-items: center;
-    width: 37px;
-    height: 37px;
-    padding: 3px 8px 3px 10px;
-    background: rgba(112, 187, 220, 0.2);
-    border: none;
-    cursor: pointer;
-    transition: $transition-duration;
-
-    &:hover {
-      opacity: 0.5;
-    }
-  }
-
-  &__slider-content {
+  &__content {
     width: 580px;
     padding-left: 23px;
   }
+}
+
+.button-prev {
+  width: 37px;
+  height: 37px;
+  padding: 3px 6px;
+  background: rgba(112, 187, 220, 0.2);
+  cursor: pointer;
+  border: none;
+  transition: $transition-duration;
+  transform: rotate(-180deg);
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.button-next {
+ @extend .button-prev;
+  padding: 3px 8px 3px 10px;
+  transform: rotate(0deg)
+}
+
+.prev {
+  padding-left: 1px;
+  transition: $transition-duration;
+  background-color: transparent;
+
+  &:hover  {
+    transition: $transition-duration;
+    color: #000000;
+    opacity: 0.75;
+  }
+
+  &:active{
+    transition: $transition-duration;
+    opacity: 0.75;
+  }
+}
+
+.next {
+  @extend .prev;
+  transform: rotate(180deg);
 }
 
 .additional-inform {
@@ -248,9 +253,9 @@ $transition-duration: .8s;
   &__title {
     padding-bottom: 10px;
     margin: 0;
-    @extend %secondary-fonts;
+    font-family: $secondary-font;
     font-weight: bold;
-    font-size: 38px;
+    font-size: $fs-title;
     line-height: 46px;
   }
 
@@ -258,38 +263,34 @@ $transition-duration: .8s;
     width: 55px;
     height: 55px;
     padding: 12px 0;
-    font-family: 'Crimson Text', serif;
+    font-family: $four-font;
     font-style: italic;
     font-weight: normal;
-    font-size: 26px;
+    font-size: $fs-title-link;
     line-height: 32px;
     background-color: #FFFFFF;
     border: none;
     cursor: pointer;
+    transition: background-color $transition-duration;
     
-
-    &:hover, &:focus {
-      transition: background-color $transition-duration;
+    &_active {
       display: flex;
       padding-left: 60px;
       margin-left: -60px;
       width: 325px;
       height: 55px;
-      background-color: rgba(112, 187, 220, 0.2);
+      font-weight: bold;
+      background: rgba(112, 187, 220, 0.2);
+    }
+    
+    &:hover, &:focus {
+      @extend .additional-inform__button_active;
     }
   }
 
-  &__button_active {
-    display: flex;
-    padding-left: 60px;
-    margin-left: -60px;
-    width: 325px;
-    height: 55px;
-    font-weight: bold;
-    background: rgba(112, 187, 220, 0.2);
-  }
-
   &__content {
+    font-family: $primary-font;
+    font-size: $fs-primary;
     line-height: 22px;
   }
 
@@ -318,10 +319,10 @@ $transition-duration: .8s;
     padding-left: 0;
     margin-bottom: 10px;
     width: 100%;
-  }
 
-  &__list-item:hover {
-    opacity: 0.75;
+    &-item:hover {
+      opacity: 0.75;
+    }
   }
 }
 
@@ -330,10 +331,11 @@ $transition-duration: .8s;
   flex-wrap: wrap;
   padding-top: 50px;
   padding-bottom: 73px;
-  font-size: 16px;
+  font-family: $primary-font;
+  font-size: $fs-primary;
   line-height: 22px;
 
-  &__block-inform-1 {
+  &__block {
     width: 543px;
     padding: 0 30px;
     margin-right: 57px;
@@ -341,29 +343,21 @@ $transition-duration: .8s;
     background: #E1F0F7;
   }
 
-  &__block-inform-2 {
-    width: 543px;
-    height: 209px;
-    padding: 0 30px;
-    margin-bottom: 100px;
-    background: #E1F0F7;
-  }
-
   &__title {
     margin: -25px 0;
     padding-bottom: 28px;
-    @extend %secondary-fonts;
+    font-family: $secondary-font;
     font-weight: bold;
-    font-size: 38px;
+    font-size: $fs-title;
     line-height: 46px;
   }
 
   &__button {
     margin-left: -7px;
-    font-family: 'Crimson Text', serif;
+    font-family: $four-font;
     font-style: italic;
     font-weight: normal;
-    font-size: 26px;
+    font-size: $fs-title-link;
     line-height: 32px;
     background: #E1F0F7;
     border: none;
@@ -380,6 +374,18 @@ $transition-duration: .8s;
     margin-top: 22px;
     margin-bottom: 17px;
   }
+}
+
+.contact {
+  width: 543px;
+  height: 209px;
+  padding: 0 30px;
+  margin-bottom: 100px;
+  background: #E1F0F7;
+
+  &__title {
+    @extend .about-us__title;
+  }
 
   &__map {
     position: relative;
@@ -395,11 +401,11 @@ $transition-duration: .8s;
   height: 100vh;
   width: 100vw;
   background-color: rgba(125, 151, 218, 0.8);
-}
 
-.modal-bg_close {
-  display: none;
-} 
+  &_close {
+    display: none;
+  } 
+}
 
 .modal-window {
   display: flex;
@@ -409,10 +415,10 @@ $transition-duration: .8s;
   margin: auto;
   width: 680px;
   min-height: 542px;
-  font-family: 'Roboto', sans-serif;
+  font-family: $third-font;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: $fs-window-text;
   line-height: 16px;
   background: #E5EAF8;
   border: none;
@@ -422,7 +428,7 @@ $transition-duration: .8s;
     justify-content: space-between;
   }
 
-  &__user-inf {
+  &__inform {
     display: flex;
     flex-direction: column;
     width: 290px;
@@ -433,10 +439,9 @@ $transition-duration: .8s;
     margin-bottom: 20px;
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.2);
-
     transition: box-shadow $transition-duration;
   
-    &:hover, &:active {
+    &:hover, &:active, &:focus {
       box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3) inset;
     }
   }
@@ -445,29 +450,33 @@ $transition-duration: .8s;
     margin-bottom: 6px;
   }
   
-  &__accept {
+  &__fieldset {
     padding: 0;
     margin: 0 0 20px;
   }
 
-  &__accept-lable {
+  &__lable {
     display: flex;
     align-items: center;
     cursor: pointer;
   }
 
-  &__accept-checkbox-click {
+  &__click {
     border: 2px solid #C29974;
     border-radius: 3px;
     width: 19px;
     height: 19px;
   }
 
-  &__accept-checkbox:focus + &__accept-checkbox-click {
+  &__accept:focus + &__click {
     border: 2px solid rgb(141, 113, 90)
   }
 
-  &__accept-checkbox:checked + &__accept-checkbox-click::before {
+  &__accept:hover + &__click {
+    border: 2px solid rgb(141, 113, 90)
+  }
+
+  &__accept:checked + &__click::before {
     content: url("/../../static/images/accept.png");
     margin: auto;
     width: 14px;
@@ -478,13 +487,13 @@ $transition-duration: .8s;
     margin-left: 8px;
   }
 
-  &__button-submit {
+  &__button {
     width: 106px;
     color: #E1E1E1;
     background: #C1C1C1;
   }
 
-  &__button-close {
+  &__close {
     position: absolute;
     top: 0;
     right: -25px;
@@ -494,6 +503,7 @@ $transition-duration: .8s;
     background-color: transparent;
     border: none;
     cursor: pointer;
+    transition: $transition-duration;
 
     &::before, &::after {
       content: "";
@@ -511,7 +521,6 @@ $transition-duration: .8s;
     }
 
     &:hover {
-      transition: $transition-duration;
       opacity: 0.5;
     }
 

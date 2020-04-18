@@ -23,8 +23,8 @@
             <button class="slider__nav-button"></button>
           </div>
   
-          <div class="slider__header-title">
-            <h2 class="slider__title">THE OOH NOO COLLECTION</h2>
+          <div class="slider__title">
+            <h2 class="slider__item">THE OOH NOO COLLECTION</h2>
             <p class="slider__text">Designed in Slovenia</p>
 
             @@include('link-button/index.html',{
@@ -34,7 +34,7 @@
             })
           </div>
   
-          <img class="slider__img-bg" src="/../../static/images/monster.png" alt="monster in a wheelbarrow">
+          <img class="slider__img" src="/../../static/images/monster.png" alt="monster in a wheelbarrow">
         </div>
         <div class="slider__text-addit">
           Free (continental) USA shipping on all orders of $100 USD or more!
@@ -44,22 +44,22 @@
       <section class="goods container">
         <h2 class="goods__title">CATEGORY PRODUCTS</h2>
         <ul class="goods__list">
-          <li class="goods__list-item">
+          <li class="goods__item">
             <a class="goods__link" href="/pages/catalog/index.html" style="background-image: url(/../../static/images/kids.png); background-color: #DBE4DB;">
               <span class="goods__link-title">APPAREL KIDS</span>
             </a>
           </li>
-          <li class="goods__list-item">
+          <li class="goods__item">
             <a class="goods__link" href="/pages/catalog/index.html" style="background-image: url(/../../static/images/holiday.png); background-color: rgba(186, 142, 107, 0.3);">
               <span class="goods__link-title">HOLIDAY SHOP</span>
             </a>
           </li>
-          <li class="goods__list-item">
+          <li class="goods__item">
             <a class="goods__link" href="/pages/toys/index.html" style="background-image: url(/../../static/images/toys.png); background-color: #F8F2DA;">
               <span class="goods__link-title">TOYS</span>
             </a>
           </li>
-          <li class="goods__list-item">
+          <li class="goods__item">
             <a class="goods__link" href="/pages/catalog/index.html" style="background-image: url(/../../static/images/accesseories.png); background-color: rgba(9, 3, 79, 0.17);">
               <span class="goods__link-title">ACCESSORIES</span>
             </a>
@@ -68,15 +68,23 @@
 
         <div class="goods-slider__slider">
           <div class="goods-slider__slider-nav">
-            <button class="goods-slider__button-prev" type="button" >
-              <img class="img-button" src="/../../static/images/vector-prev.png" alt="button-prev">
+            <button class="button-prev" type="button" >
+              <span class="prev">
+                <svg class="svg" width="17" height="29" vievBox="0 0 17 29" fill="none">
+                  <path d ="M 0 3 L 11 14, L 0 26, L 3 29, L 17 14, L 3 0, Z" fill="black"/>
+                </svg>
+              </span>
             </button>
-            <button class="goods-slider__button-next" type="button">
-              <img class="img-button" src="/../../static/images/vector-next.png" alt="button-next">
+            <button class="button-next" type="button">
+              <span class="next">
+                <svg class="svg" width="17" height="29" vievBox="0 0 17 29" fill="none">
+                  <path d ="M 0 3 L 11 14, L 0 26, L 3 29, L 17 14, L 3 0, Z" fill="black"/>
+                </svg>
+              </span>
             </button>
           </div>
 
-          <div class="goods-slider__slider-content">
+          <div class="goods-slider__content">
             Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.
           </div>
         </div>
@@ -136,7 +144,7 @@
       </section>
 
       <section class="about-us container">
-        <div class="about-us__block-inform-1">
+        <div class="about-us__block">
           <h3 class="about-us__title">DESIGN LIFE KIDS</h3>
           <button class="about-us__button" type="button">About Us</button>
           <p class="about-us__text">
@@ -151,13 +159,13 @@
           })
         </div>
 
-        <div class="about-us__block-inform-2">
-          <h3 class="about-us__title">CONTACTS</h3>
-          <p class="about-us__text">
+        <div class="contact">
+          <h3 class="contact__title">CONTACTS</h3>
+          <p class="contact__text">
             Some days i feel like i've been working on dlk my entire life and 
             there are other days that i am completely shocked that four years
             have flown by. It's simply magical.</p>
-          <iframe class="about-us__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5790052710736!2d-122.41938908469996!3d37.77646847975914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter!5e0!3m2!1sen!2sru!4v1584077262461!5m2!1sen!2sru" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5790052710736!2d-122.41938908469996!3d37.77646847975914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter!5e0!3m2!1sen!2sru!4v1584077262461!5m2!1sen!2sru" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
       </section>
     </main>
@@ -170,12 +178,12 @@
         <input class="modal-window__input modal-window__input_js" id="user-name" type="text" name="name">
         
         <div class="modal-window__user">
-          <div class="modal-window__user-inf">
+          <div class="modal-window__inform">
             <label class="modal-window__label" for="user-phone">Phone</label>
             <input class="modal-window__input" id="user-phone" type="text" name="phone">
           </div>
 
-          <div class="modal-window__user-inf">
+          <div class="modal-window__inform">
             <label class="modal-window__label" for="user-email">Email</label>
             <input class="modal-window__input" id="user-email" type="email" name="email">
           </div>
@@ -184,20 +192,20 @@
         <label class="modal-window__label" for="user-message">Message</label>
         <textarea class="modal-window__input" id="user-message" name="message"></textarea>
   
-        <fieldset class="modal-window__accept">
-          <label class="modal-window__accept-lable">
-            <input class="modal-window__accept-checkbox hidden" type="checkbox" name="accept" value="accept">
-            <span class="modal-window__accept-checkbox-click"></span>
+        <fieldset class="modal-window__fieldset">
+          <label class="modal-window__lable">
+            <input class="modal-window__accept hidden" type="checkbox" name="accept" value="accept">
+            <span class="modal-window__click"></span>
             <span class="modal-window__text">By click on the button, you concent to the processing of you personal data</span>
           </label>
         </fieldset>
         @@include('button/index.html',{
           "text": "SUBMIT",
-          "class": "modal-window__button-submit",
+          "class": "modal-window__button",
           "type": "submit",
           "value": "submit"
         })
-        <button class="modal-window__button-close modal-window__button-close_js" type="button" value="closed"></button>
+        <button class="modal-window__close modal-window__close_js" type="button" value="closed"></button>
       </form>
     </div>
     <script src="index.js"></script>

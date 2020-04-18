@@ -1,3 +1,5 @@
+@import './consts';
+
 .pages {
   display: flex;
   flex-wrap: wrap;
@@ -10,10 +12,10 @@
     margin: auto;
     padding-left: 0;
     justify-content: space-between;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $secondary-font;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: $fs-primary;
     line-height: 20px;
     color: #1E0606;
   }
@@ -32,31 +34,31 @@
   }
   
   &__prev {
-    background-image: url("/../../static/images/next-prev-pages.png");
-    background-repeat: no-repeat;
     transform: rotate(-180deg);
-    transition: background-image $transition-duration;
+  }
+}
 
-    &:hover {
-      background-image: url("/../../static/images/next-prev-hov.png");
-    }
-  
-    &:active {
-      opacity: 0.5;
-    }
+.prev {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border: none;
+  fill:#E4E1E1;
+
+  &:hover {
+    transition: $transition-duration;
+    fill:#C29974;
   }
-  
-  &__next {
-    background-image: url("/../../static/images/next-prev-pages.png");
-    background-repeat: no-repeat;
-    transition: background-image $transition-duration;
-    
-    &:hover {
-      background-image: url("/../../static/images/next-prev-hov.png");
-    }
-  
-    &:active {
-      opacity: 0.5;
-    }
+
+  &:active {
+    transition: $transition-duration;
+    opacity: 0.5;
   }
+}
+
+.next {
+  @extend .prev;
+  transform: rotate(-180deg);
 }

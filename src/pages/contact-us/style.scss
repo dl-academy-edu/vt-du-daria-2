@@ -1,19 +1,14 @@
-.header .no-active-4 {
-  opacity: 1; 
-  cursor: default;
-}
-
-$transition-duration: .4s;
+@import "../../components/consts";
 
 .contact {
   display: flex;
   flex-wrap: wrap;
   padding-top: 43px;
   padding-bottom: 61px;
-  font-family: 'Roboto', sans-serif;
+  font-family: $third-font;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: $fs-window-text;
   line-height: 16px;
 }
   
@@ -104,14 +99,15 @@ fieldset {
 .additional-inform {
   padding-left: 120px;
   width: 500px;
-  font-size: 16px;
+  font-family: $primary-font;
+  font-size: $fs-primary;
   line-height: 22px;
 
   &__link {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $secondary-font;
     font-style: normal;
     font-weight: 600;
-    font-size: 26px;
+    font-size: $fs-title-link;
     line-height: 34px;
     text-transform: uppercase;
     color: #C29974;

@@ -13,12 +13,13 @@
     @@include('header/index.html')
     <main class="main container-back">
       <h1 class="title container">TOY FOR KIDS</h1>
+      
       <div class="breadcrumbs container">
         <a class="breadcrumbs__link" href="/">Home</a>
-        <img class="breadcrumbs__img" src="/../../static/images/vector.png" alt="vector">
+        <div class="vector"></div>
         <a class="breadcrumbs__link" href="/../pages/catalog/index.html">Catalog</a>
-        <img class="breadcrumbs__img" src="/../../static/images/vector.png" alt="vector">
-        <span class="breadcrumbs__current-page">Toys</span>
+        <div class="vector"></div>
+        <span class="breadcrumbs__link_current">Toys</span>
       </div>
 
       <div class="selection">
@@ -36,32 +37,32 @@
           <fieldset class="color"> 
             <span class="color__title">Color</span>
             <ul class="color__list">
-              <li class="color__list-etem">
+              <li class="color__etem">
                 <label class="color__label">
-                  <input class="color__input hidden" type="checkbox" name="color-black" value="black">
-                  <span class="color__click color__click_active"></span>
-                  <span class="color__text">Black</span> 
+                  <input class="input hidden" type="checkbox" name="color-black" value="black">
+                  <span class="click click_active"></span>
+                  <span class="text">Black</span> 
                 </label>
               </li>
-              <li class="color__list-etem">
+              <li class="color__etem">
                 <label class="color__label">
-                  <input class="color__input hidden" type="checkbox" name="color-blue" value="blue">
-                  <span class="color__click"></span>
-                  <span class="color__text">Blue</span> 
+                  <input class="input hidden" type="checkbox" name="color-blue" value="blue">
+                  <span class="click"></span>
+                  <span class="text">Blue</span> 
                 </label>
               </li>
-              <li class="color__list-etem">
+              <li class="color__etem">
                 <label class="color__label">
-                  <input class="color__input hidden" type="checkbox" name="color-green" value="green">
-                  <span class="color__click"></span>
-                  <span class="color__text">Green</span>
+                  <input class="input hidden" type="checkbox" name="color-green" value="green">
+                  <span class="click"></span>
+                  <span class="text">Green</span>
                 </label>
               </li>
-              <li class="color__list-etem">
+              <li class="color__etem">
                 <label class="color__label">
-                  <input class="color__input hidden" type="checkbox" name="color-white" value="white">
-                  <span class="color__click"></span>
-                  <span class="color__text">White</span>
+                  <input class="input hidden" type="checkbox" name="color-white" value="white">
+                  <span class="click"></span>
+                  <span class="text">White</span>
                 </label>
               </li>
             </ul>
@@ -70,18 +71,18 @@
           <fieldset class="delivery">
             <span class="delivery__title">Delivery</span>
             <ul class="delivery__list">
-              <li class="delivery__list-etem">
+              <li class="delivery__etem">
                 <label class="delivery__label">
-                  <input class="delivery__input hidden" type="radio" name="shipping" value="free">
-                  <span class="delivery__click"></span>
-                  <span class="delivery__text">Free shipping</span>
+                  <input class="input hidden" type="radio" name="shipping" value="free">
+                  <span class="clicker"></span>
+                  <span class="text">Free shipping</span>
                 </label>
               </li>
-              <li class="delivery__list-etem">
+              <li class="delivery__etem">
                 <label class="delivery__label">
-                  <input class="delivery__input hidden" type="radio" name="shipping" value="fast">
-                  <span class="delivery__click delivery__click_active"></span>
-                  <span class="delivery__text">Fast shipping</span>
+                  <input class="input hidden" type="radio" name="shipping" value="fast">
+                  <span class="clicker clicker_active"></span>
+                  <span class="text">Fast shipping</span>
                 </label>
               </li>
             </ul>
@@ -92,20 +93,20 @@
             <ul class="amount__list">
               <li>
                 <label class="amount__label">
-                  <input class="amount__input hidden" type="radio" name="range" value="0-5">
-                  <span class ="amount__text amount__text_active">0-5</span>
+                  <input class="input hidden" type="radio" name="range" value="0-5">
+                  <span class ="value value_active">0-5</span>
                 </label>
               </li>
               <li>
                 <label class="amount__label">
-                  <input class="amount__input hidden" type="radio" name="range" value="10-20">
-                  <span class="amount__text">10-20</span>
+                  <input class="input hidden" type="radio" name="range" value="10-20">
+                  <span class="value">10-20</span>
                 </label>
               </li>
               <li>
                 <label class="amount__label">
-                  <input class="amount__input hidden" type="radio" name="range" value="20-50">
-                  <span class="amount__text">20-50</span>
+                  <input class="input hidden" type="radio" name="range" value="20-50">
+                  <span class="value">20-50</span>
                 </label>
               </li>
             </ul>
@@ -122,7 +123,7 @@
       <section class="goods container">
         <h2 class="hidden">Goods</h2>
         <ul class="goods__list">
-          <li class="goods__list-item goods__list-item_1">
+          <li class="goods__item">
             <a href="#" class="goods__link">
               <img src="/../../static/images/sharkey.jpg" alt="SHARKY BEAN BAG CHAIR COVER" class="goods__link-bg">
               <span class="goods__hover">LEAN MORE</span>
@@ -130,7 +131,7 @@
             </a>
             <span class="goods__price">&#36;60.00 USD</span>
           </li>
-          <li class="goods__list-item goods__list-item_2">
+          <li class="goods__item">
             <a href="#" class="goods__link">
               <img src="/../../static/images/brass.jpg" alt="BRASS DECO FRAMES" class="goods__link-bg">
               <span class="goods__hover">LEAN MORE</span>
@@ -138,7 +139,7 @@
             </a>
             <span class="goods__price">&#36;66.00 USD</span>
           </li>
-          <li class="goods__list-item goods__list-item_3">
+          <li class="goods__item">
             <a href="#" class="goods__link">
               <img src="/../../static/images/cibo.jpg" alt="CIBO FULL APRON" class="goods__link-bg">
               <span class="goods__hover">LEAN MORE</span>
@@ -146,7 +147,7 @@
             </a>
             <span class="goods__price">&#36;66.00 USD</span>
           </li>
-          <li class="goods__list-item">
+          <li class="goods__item">
             <a href="#" class="goods__link">
               <img src="/../../static/images/machine.jpg" alt="GATCHA GATCHA GUMBALL MACHINE" class="goods__link-bg">
               <span class="goods__hover">LEAN MORE</span>
@@ -154,7 +155,7 @@
             </a>
             <span class="goods__price">&#36;56.00 USD</span>
           </li>
-          <li class="goods__list-item">
+          <li class="goods__item">
             <a href="#" class="goods__link">
               <img src="/../../static/images/candle.jpg" alt="CHRISTMAS ADVENT SCENTED CANDLE" class="goods__link-bg">
               <span class="goods__hover">LEAN MORE</span>
@@ -162,7 +163,7 @@
             </a>
             <span class="goods__price">&#36;29.00 USD</span>
           </li>
-          <li class="goods__list-item">
+          <li class="goods__item">
             <a href="#" class="goods__link">
               <img src="/../../static/images/tangle.jpg" alt="TANGLE SPINNING TEA LIGHT" class="goods__link-bg">
               <span class="goods__hover">LEAN MORE</span>

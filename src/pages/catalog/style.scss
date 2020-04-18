@@ -1,14 +1,4 @@
-%secondary-fonts {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-}
-
-$transition-duration: .4s;
-
-.header .no-active-2 {
-  opacity: 1; 
-  cursor: default;
-}
+@import "../../components/consts";
 
 .goods {
   padding: 15px 0 13px;
@@ -20,7 +10,7 @@ $transition-duration: .4s;
     padding: 0;
   }
 
-  &__list-item {
+  &__item {
     margin: 23px 10px 0;
 
     &:nth-child(4) {
@@ -33,9 +23,9 @@ $transition-duration: .4s;
     align-items: center;
     height: 270px;
     width: 280px;
-    @extend %secondary-fonts;
+    font-family: $secondary-font;
     font-weight: bold;
-    font-size: 26px;
+    font-size: $fs-title-link;
     line-height: 32px;
     color: #FFFFFF;
     text-shadow: 0 0 40px rgba(147, 3, 3, 0.25);
@@ -44,7 +34,6 @@ $transition-duration: .4s;
     background-position: center;
 
     &:hover {
-      transition: $transition-duration;
       text-decoration: underline;
     }
   }
@@ -71,15 +60,15 @@ $transition-duration: .4s;
   &__title {
     margin: 0;
     padding-top: 39px;
-    @extend %secondary-fonts;
+    font-family: $secondary-font;
     font-weight: bold;
-    font-size: 38px;
+    font-size: $fs-title;
     line-height: 46px;
   }
 
   &__content {
     padding-top: 5px;
-    font-size: 16px;
+    font-size: $fs-primary;
     line-height: 22px;
   }
 

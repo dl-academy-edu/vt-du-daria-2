@@ -1,3 +1,5 @@
+@import "../../components/consts";
+
 %padding-margin {
   padding: 0;
   margin: 0;
@@ -5,13 +7,6 @@
 
 %font-title {
   font-weight: bold;
-}
-
-$transition-duration: .4s;
-
-.header .no-active-3 {
-  opacity: 1; 
-  cursor: default;
 }
 
 fieldset {
@@ -32,33 +27,31 @@ fieldset {
 }
 
 .range {
-    width: 233px;
-    padding: 0;
-    margin: 0;
+  width: 233px;
+  @extend %padding-margin;
 
-    &__title {
-      @extend %font-title;
-    }
+  &__title {
+    @extend %font-title;
+  }
 
-    &__0-500 {
-      display: flex;
-      justify-content: space-between;
-      padding-top: 15px;
-      width: 207px;
-    }
+  &__0-500 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    width: 207px;
+  }
 
-    &__input {
-      -webkit-appearance: none;
-      border-radius: 1px;
-      width: 194px;
-      height: 6px;
-      margin-top: 25px;
-      outline : none;
-      border: 1px solid #D4D4D4;
-      background-color: #7F7F7F;
-    } 
+  &__input {
+    -webkit-appearance: none;
+    border-radius: 1px;
+    width: 194px;
+    height: 6px;
+    margin-top: 25px;
+    outline : none;
+    border: 1px solid #D4D4D4;
+    background-color: #7F7F7F;
 
-    &__input::-webkit-slider-thumb {
+    &::-webkit-slider-thumb {
       -webkit-appearance: none;
       width: 24px;
       height: 24px;
@@ -67,6 +60,7 @@ fieldset {
       cursor: pointer;
       background: #FFFFFF;
     }
+  } 
 }
 
 .color {
@@ -82,7 +76,7 @@ fieldset {
     padding: 15px 0 0;
   }
 
-  &__list-etem {
+  &__etem {
     padding-bottom: 15px;
   }
 
@@ -92,37 +86,43 @@ fieldset {
     margin-right: 33px;
     cursor: pointer;
     position: relative;
-  }
 
-  &__click {
-    width: 19px;
-    height: 19px;
-    border: 2px solid #C29974;
-    border-radius: 3px;
+    > input {
+      &:focus + .click {
+        border: 2px solid rgb(141, 113, 90);
+      }
+      
+      &:checked + .click {
+        background-color: #FFFFFF;
+      }
+      
+      &:checked + .click::before {
+        content: url("/../../static/images/accept.png");
+        position: absolute;
+        top: 3px;
+        transform: scale(.9);
+        height: 0px;
+        background-color: #FFFFFF;
+      }
+    }
   }
+}
 
-  &__click_active {
+.click {
+  width: 19px;
+  height: 19px;
+  border: 2px solid #C29974;
+  border-radius: 3px;
+
+  &_active {
     content: url("/../../static/images/accept.png");
     background-color: #FFFFFF;
     top: 1px;
   }
+}
 
-  &__input:focus + &__click {
-    border: 2px solid rgb(141, 113, 90);
-  }
-  
-  &__input:checked + &__click {
-    background-color: #FFFFFF;
-  }
-  
-  &__input:checked + &__click::before {
-    content: url("/../../static/images/accept.png");
-    top: 1px;
-  }
-  
-  &__text {
-    margin-left: 10px;
-  }
+.text {
+  margin-left: 10px;
 }
 
 .delivery {
@@ -134,50 +134,44 @@ fieldset {
   }
 
   &__list {
-    margin: 0;
-    padding: 15px 0 0;
+    @extend .color__list;
   }
 
-  &__list-etem {
-    padding-bottom: 15px;
+  &__etem {
+    @extend .color__etem;
   }
 
   &__label {
-    display: flex;
-    align-items: center;
-    margin-right: 33px;
-    cursor: pointer;
-    position: relative;
-  }
+    @extend .color__label;
 
-  &__click {
-    display: flex;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    border: 3px solid #C29974;
-    border-radius: 100%;
+    > input:focus + .clicker {
+      border: 3px solid rgb(141, 113, 90)
+    }
+  
+    > input:checked + .clicker::before {
+      @extend .clicker_active;
+    } 
   }
-
-  &__input:focus + &__click {
-    border: 3px solid rgb(141, 113, 90)
-  }
-
-  &__input:checked + &__click::before,
-  &__click_active::before {
-  content:"";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 12px;
-  height: 12px;
-  background-color:  #C29974;
-  border-radius: 100%;
 }
 
-  &__text {
-    margin-left: 10px;
+.clicker {
+  display: flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #c29974;
+  border-radius: 100%;
+  
+  &_active::before {
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color:  #C29974;
+    border-radius: 100%;
   }
 }
 
@@ -187,13 +181,12 @@ fieldset {
   margin-left: 39px;
 
   &__title {
-    font-weight: bold;
+    @extend %font-title;
   }
 
   &__list {
     display: flex;
-    margin: 0;
-    padding: 15px 0 0;
+    @extend .color__list;
   }
 
   &__text {
@@ -203,32 +196,32 @@ fieldset {
 
   &__label {
     display: flex;
-  }
+    text-align: center;
+    line-height: 2em;
 
-  &__input + &__text {
-    width: 80px;
-    height: 35px;
-    background-color: #FFFFFF;
-    cursor: pointer;
-  }
+    > input + .value {
+      width: 80px;
+      height: 35px;
+      background-color: #FFFFFF;
+      cursor: pointer;
+    }
 
-  &__input + &__text_active,
-  &__input:active + &__text, 
-  &__input:focus + &__text {
-    background-color: #F3D0DB;
+    > input + .value_active,
+    > input:active + .value, 
+    > input:focus + .value {
+      background-color: #F3D0DB;
+    }
+
+    > input:hover + .value {
+      background-color: #EDDEEB;
+      transition: background-color $transition-duration;
+    }
     
+    > input:focus + .value {
+      box-shadow: 0px 0px 0px 1.5px #79ABFE inset;
+      border-radius: 2px;
+    }
   }
-
-  &__input:hover + &__text {
-    background-color: #EDDEEB;
-    transition: background-color $transition-duration;
-  }
-  
-  &__input:focus + &__text {
-    box-shadow: 0px 0px 0px 1.5px #79ABFE inset;
-    border-radius: 2px;
-  }
-
 }
 
 .button-submit {
@@ -250,7 +243,7 @@ fieldset {
     padding-top: 62px;
   }
 
-  &__list-item {
+  &__item {
     display: flex;
     flex-direction: column;
     width: 380px;
@@ -261,12 +254,12 @@ fieldset {
   &__link {
     text-align: center;
     position: relative;
-  }
 
-  &__link-title {
-    font-size: 14px;
-    line-height: 19px;
-    color: #1E0606;
+    &-title {
+      font-size: 14px;
+      line-height: 19px;
+      color: #1E0606;
+    }
   }
 
   &__hover {
@@ -280,10 +273,10 @@ fieldset {
     align-items: center;
     justify-content: center;
     color: #000000;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $secondary-font;
     font-style: normal;
     font-weight: bold;
-    font-size: 26px;
+    font-size: $fs-title-link;
     background-color: #E5EAF8;;
     opacity: 0;
     transition: $transition-duration;
@@ -294,7 +287,6 @@ fieldset {
     transition: $transition-duration;
   }
 
-
   &__link:active > &__hover {
     opacity: 0.67;
     transition: $transition-duration;
@@ -302,8 +294,9 @@ fieldset {
   
   &__price {
     padding-top: 17px;
+    font-family: $primary-font;
     font-weight: bold;
-    font-size: 16px;
+    font-size: $fs-primary;
     line-height: 22px;
   }
 }
