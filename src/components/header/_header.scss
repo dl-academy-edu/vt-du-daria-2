@@ -1,82 +1,75 @@
-.title {
-  padding-bottom: 4px;
-  padding-top: 22px;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 49px;
+@import './consts';
+
+%flex-and-center {
+  display: flex;
+  align-items: center;
 }
 
 .header {
-  display: flex;
+  @extend %flex-and-center;
   padding: 49px 20px 36px;
-  align-items: center;
-}
+  
 
-.header__logo {
-  min-width: 100px;
-  height: 52px;
-}
+  &__logo {
+    min-width: 100px;
+    height: 52px;
+    transition: $transition-duration;
+    
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
 
-.header__logo:hover {
-  opacity: 0.5;
-  cursor: pointer;
-}
+  &__nav {
+    @extend %flex-and-center;
+    width: 100%;
+    justify-content: space-between;
+    
+  }
 
-li span[class="header__nav-item"]:hover {
-  opacity: 1;
-}
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-left: 60px;
+  }
 
-.header__nav {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
+  &__item {
+    padding-right: 20px;
+    font-size: $fs_text-header;
+    line-height: 19px;
+    color: $color_text-header;
+    transition: $transition-duration;
 
-.header__nav-list,
-.header__nav-list_links {
-  list-style-type: none;
-}
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 
-.header__nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-left: 60px;
-}
+  &__links {
+    display: flex;
+    padding-top: 3px; 
+  }
 
-.header__nav-list_links {
-  list-style-type: none;
-  display: flex;
-  padding-top: 3px; 
-}
+  &__search {
+    padding-right: 23px;
+    transition: $transition-duration;
 
-.header__nav-item {
-  padding-right: 20px;
-  font-size: 14px;
-  line-height: 19px;
-  color: #1E0606;
-}
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 
-.header__nav-item:hover {
-  opacity: 0.5;
-}
+  &__contact {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: $color_text-header;
+    transition: $transition-duration;
 
-span.header__nav-item:hover > .not_active {
-  opacity: 1;
-}
-
-.header__nav-item_link-bold {
-  margin-left: 2px; 
-  margin-right: 4px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 19px;
-  color: #1E0606;
-}
-
-.header__nav-item_link-bold:hover {
-  opacity: 0.5;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }

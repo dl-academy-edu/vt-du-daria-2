@@ -1,20 +1,25 @@
+@import './consts';
+
 .button {
   display: block; 
   padding: 9px;
   font-weight: bold;
-  font-size: 16px;
+  font-family: $primary-font;
+  font-size: $fs-primary;
   line-height: 22px;
   text-align: center;
   color: #FFFFFF;
-  background: #000000;
+  background-color: #000000;
   border: none;
   cursor: pointer;
-}
 
-.button:hover {
-  background: #C29974;
-}
+  transition: background-color $transition-duration;
 
-.button:active {
-  background: #CFAF91;
+  &:hover {
+    background-color: #C29974;
+  }
+  
+  &:active {
+    background-color: #CFAF91;
+  }
 }

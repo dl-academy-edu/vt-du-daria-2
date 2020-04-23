@@ -13,105 +13,107 @@
     @@include('header/index.html')
     <main class="main container-back">
       <h1 class="title container">TOY FOR KIDS</h1>
+      
       <div class="breadcrumbs container">
         <a class="breadcrumbs__link" href="/">Home</a>
-        <img class="breadcrumbs__img" src="/../../static/images/vector.png" alt="vector">
+        <div class="vector"></div>
         <a class="breadcrumbs__link" href="/../pages/catalog/index.html">Catalog</a>
-        <img class="breadcrumbs__img" src="/../../static/images/vector.png" alt="vector">
-        <span class="breadcrumbs__current-page">Toys</span>
+        <div class="vector"></div>
+        <span class="breadcrumbs__link_current">Toys</span>
       </div>
 
       <div class="selection">
-        <form class="selection__bar" action="#" method="POST">
-          <fieldset class="selection__cost">
-            <span class="selection__title">Cost</span>
-            <input class="selection__cost-input-range" id="range-user" type="range" name="cost" min="0" max="500" value="125">
-            <div class="selection__cost-range">
-              <span class="cost__range_0">0</span> 
-              <span class="cost__range_500">500</span>
+        <form class="selection__form" action="#" method="POST">
+
+          <fieldset class="range">
+            <span class="range__title">Cost</span>
+            <input class="range__input" id="range-user" type="range" name="cost" min="0" max="500" value="125">
+            <div class="range__0-500">
+              <span>0</span> 
+              <span>500</span>
             </div>
           </fieldset>
       
-          <fieldset class="selection__color"> 
-            <span class="selection__title">Color</span>
-            <ul class="selection__list">
-              <li class="selection__list-etem">
-                <label class="selection__label">
-                  <input class="selection__input hidden" type="checkbox" name="color-black" value="black">
-                  <span class="selection__click active"></span>
-                  <span class="selection__text">Black</span> 
+          <fieldset class="color"> 
+            <span class="color__title">Color</span>
+            <ul class="color__list">
+              <li class="color__etem">
+                <label class="color__label">
+                  <input class="input hidden" type="checkbox" name="color-black" value="black">
+                  <span class="click click_active"></span>
+                  <span class="text">Black</span> 
                 </label>
               </li>
-              <li class="selection__list-etem">
-                <label class="selection__label">
-                  <input class="selection__input hidden" type="checkbox" name="color-blue" value="blue">
-                  <span class="selection__click"></span>
-                  <span class="selection__text">Blue</span> 
+              <li class="color__etem">
+                <label class="color__label">
+                  <input class="input hidden" type="checkbox" name="color-blue" value="blue">
+                  <span class="click"></span>
+                  <span class="text">Blue</span> 
                 </label>
               </li>
-              <li class="selection__list-etem">
-                <label class="selection__label">
-                  <input class="selection__input hidden" type="checkbox" name="color-green" value="green">
-                  <span class="selection__click"></span>
-                  <span class="selection__text">Green</span>
+              <li class="color__etem">
+                <label class="color__label">
+                  <input class="input hidden" type="checkbox" name="color-green" value="green">
+                  <span class="click"></span>
+                  <span class="text">Green</span>
                 </label>
               </li>
-              <li class="selection__list-etem">
-                <label class="selection__label">
-                  <input class="selection__input hidden" type="checkbox" name="color-white" value="white">
-                  <span class="selection__click"></span>
-                  <span class="selection__text">White</span>
+              <li class="color__etem">
+                <label class="color__label">
+                  <input class="input hidden" type="checkbox" name="color-white" value="white">
+                  <span class="click"></span>
+                  <span class="text">White</span>
                 </label>
               </li>
             </ul>
           </fieldset> 
 
-          <fieldset class="selection__delivery">
-            <span class="selection__title">Delivery</span>
-            <ul class="selection__list">
-              <li class="selection__list-etem">
-                <label class="selection__label">
-                  <input class="selection__input-user hidden" type="radio" name="shipping" value="free">
-                  <span class="selection__click-user"></span>
-                  <span class="selection__text">Free shipping</span>
+          <fieldset class="delivery">
+            <span class="delivery__title">Delivery</span>
+            <ul class="delivery__list">
+              <li class="delivery__etem">
+                <label class="delivery__label">
+                  <input class="input hidden" type="radio" name="shipping" value="free">
+                  <span class="clicker"></span>
+                  <span class="text">Free shipping</span>
                 </label>
               </li>
-              <li class="selection__list-etem">
-                <label class="selection__label">
-                  <input class="selection__input-user hidden" type="radio" name="shipping" value="fast">
-                  <span class="selection__click-user active"></span>
-                  <span class="selection__text">Fast shipping</span>
+              <li class="delivery__etem">
+                <label class="delivery__label">
+                  <input class="input hidden" type="radio" name="shipping" value="fast">
+                  <span class="clicker clicker_active"></span>
+                  <span class="text">Fast shipping</span>
                 </label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="selection__amount">
-            <span class="selection__title">Amount</span>
-            <ul class="selection__list amount">
-              <li class="selection__list-etem">
-                <label class="selection__label range">
-                  <input class="selection__input-range hidden" type="radio" name="range" value="0-5">
-                  <span class ="amount-range active">0-5</span>
+          <fieldset class="amount">
+            <span class="amount__title">Amount</span>
+            <ul class="amount__list">
+              <li>
+                <label class="amount__label">
+                  <input class="input hidden" type="radio" name="range" value="0-5">
+                  <span class ="value value_active">0-5</span>
                 </label>
               </li>
-              <li class="selection__list-etem">
-                <label class="selection__label range">
-                  <input class="selection__input-range hidden" type="radio" name="range" value="10-20">
-                  <span class="amount-range">10-20</span>
+              <li>
+                <label class="amount__label">
+                  <input class="input hidden" type="radio" name="range" value="10-20">
+                  <span class="value">10-20</span>
                 </label>
               </li>
-              <li class="selection__list-etem">
-                <label class="selection__label range">
-                  <input class="selection__input-range hidden" type="radio" name="range" value="20-50">
-                  <span class="amount-range">20-50</span>
+              <li>
+                <label class="amount__label">
+                  <input class="input hidden" type="radio" name="range" value="20-50">
+                  <span class="value">20-50</span>
                 </label>
               </li>
             </ul>
           </fieldset>
           @@include('button/index.html',{
             "text": "APPLY",
-            "class": "selection__button-submit",
+            "class": "button-submit",
             "type": "submit",
             "value": "apply"
           })
@@ -121,81 +123,60 @@
       <section class="goods container">
         <h2 class="hidden">Goods</h2>
         <ul class="goods__list">
-          <li class="goods__list-item goods__list-item_1">
+          <li class="goods__item">
             <a href="#" class="goods__link">
               <img src="/../../static/images/sharkey.jpg" alt="SHARKY BEAN BAG CHAIR COVER" class="goods__link-bg">
-              <span class="goods__hover"></span>
+              <span class="goods__hover">LEAN MORE</span>
               <span class="goods__link-title">SHARKY BEAN BAG CHAIR COVER</span>
             </a>
             <span class="goods__price">&#36;60.00 USD</span>
           </li>
-          <li class="goods__list-item goods__list-item_2">
+          <li class="goods__item">
             <a href="#" class="goods__link">
               <img src="/../../static/images/brass.jpg" alt="BRASS DECO FRAMES" class="goods__link-bg">
-              <span class="goods__hover"></span>
+              <span class="goods__hover">LEAN MORE</span>
               <span class="goods__link-title">BRASS DECO FRAMES</span>
             </a>
             <span class="goods__price">&#36;66.00 USD</span>
           </li>
-          <li class="goods__list-item goods__list-item_3">
+          <li class="goods__item">
             <a href="#" class="goods__link">
               <img src="/../../static/images/cibo.jpg" alt="CIBO FULL APRON" class="goods__link-bg">
-              <span class="goods__hover"></span>
+              <span class="goods__hover">LEAN MORE</span>
               <span class="goods__link-title">CIBO FULL APRON</span>
             </a>
             <span class="goods__price">&#36;66.00 USD</span>
           </li>
-          <li class="goods__list-item">
+          <li class="goods__item">
             <a href="#" class="goods__link">
               <img src="/../../static/images/machine.jpg" alt="GATCHA GATCHA GUMBALL MACHINE" class="goods__link-bg">
-              <span class="goods__hover"></span>
+              <span class="goods__hover">LEAN MORE</span>
               <span class="goods__link-title">GATCHA GATCHA GUMBALL MACHINE</span>
             </a>
             <span class="goods__price">&#36;56.00 USD</span>
           </li>
-          <li class="goods__list-item">
+          <li class="goods__item">
             <a href="#" class="goods__link">
               <img src="/../../static/images/candle.jpg" alt="CHRISTMAS ADVENT SCENTED CANDLE" class="goods__link-bg">
-              <span class="goods__hover"></span>
+              <span class="goods__hover">LEAN MORE</span>
               <span class="goods__link-title">CHRISTMAS ADVENT SCENTED CANDLE</span>
             </a>
             <span class="goods__price">&#36;29.00 USD</span>
           </li>
-          <li class="goods__list-item">
+          <li class="goods__item">
             <a href="#" class="goods__link">
               <img src="/../../static/images/tangle.jpg" alt="TANGLE SPINNING TEA LIGHT" class="goods__link-bg">
-              <span class="goods__hover"></span>
+              <span class="goods__hover">LEAN MORE</span>
               <span class="goods__link-title">TANGLE SPINNING TEA LIGHT</span>
             </a>
             <span class="goods__price">&#36;56.00 USD</span>
           </li>
         </ul>
 
-        <div class="goods__pages">
-          <a href="#" class="goods__link pages_prev">
-            <img class="goods__img-prev" src="/../../static/images/next-prev-pages.png" alt="vector">
-          </a>
-          <ul class="goods__pages-list">
-            <li class="goods__pages-item">
-              <a href="#" class="goods__link page active">1</a>
-            </li>
-            <li class="goods__pages-item">
-              <a href="#" class="goods__link page">2</a>
-            </li>
-            <li class="goods__pages-item">
-              <a href="#" class="goods__link page">3</a>
-            </li>
-            <li class="goods__pages-item">
-              <a href="#" class="goods__link page">4</a>
-            </li>
-          </ul>
-          <a href="#" class="goods__link pages_next">
-            <img class="goods__img-next" src="/../../static/images/next-prev-pages.png" alt="vector">
-          </a>
-        </div>
+        @@include('link-pages/index.html')
       </section>
     </main>
     @@include('footer/index.html')
-    <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

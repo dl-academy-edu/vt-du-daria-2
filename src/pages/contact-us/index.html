@@ -16,14 +16,14 @@
 
       <div class="breadcrumbs container">
         <a class="breadcrumbs__link" href="/">Home</a>
-        <img class="breadcrumbs__img" src="/../../static/images/vector.png" alt="vector">
+        <div class="vector"></div>
         <span class="breadcrumbs__current-page">Contact Us</span>
       </div>
 
       <section class="contact container">
         <h2 class="hidden">contact</h2>
-        <div class="contact-bg">
-          <form class="contact-window " action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+        <div class="contact-window">
+          <form class="contact-window__form" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
             <label class="contact-window__label" for="user-name"> Name</label>
             <input class="contact-window__input" id="user-name" type="text" name="name" placeholder="Ivan Ivanov">
             
@@ -45,7 +45,7 @@
             <fieldset class="contact-window__accept">
               <label class="contact-window__accept-lable">
                 <input class="contact-window__accept-checkbox hidden" type="checkbox" name="accept" value="accept">
-                <span class="contact-window__accept-checkbox-click active"></span>
+                <span class="contact-window__accept-checkbox-click contact-window__accept-checkbox-click_active"></span>
                 <span class="contact-window__text">By click on the button, you concent to the processing of you personal data</span>
               </label>
             </fieldset>
@@ -59,15 +59,15 @@
           </form>
         </div>
         
-        <div class="contact__additional-inform">
-          <p class="contact__text">Our support team are on-hand to assist with any issues you are experiencing.</p>
-          <p class="contact__text">Please use the form to contact us with your needs. Send us a message and we'll respond
+        <div class="additional-inform">
+          <p class="additional-inform__text">Our support team are on-hand to assist with any issues you are experiencing.</p>
+          <p class="additional-inform__text">Please use the form to contact us with your needs. Send us a message and we'll respond
             as soon as possible.</p>
-          <a href="#" class="contact__additional-inform__link">An expert is wating to help you!</a>
+          <a href="#" class="additional-inform__link">An expert is wating to help you!</a>
         </div>
       </section>
     </main>
     @@include('footer/index.html')
-    <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

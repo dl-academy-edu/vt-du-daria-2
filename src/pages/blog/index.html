@@ -16,16 +16,16 @@
 
       <div class="breadcrumbs container">
         <a class="breadcrumbs__link" href="/">Home</a>
-        <img class="breadcrumbs__img" src="/../../static/images/vector.png" alt="vector">
-        <span class="breadcrumbs__current-page">Blog</span>
+        <div class="vector"></div>
+        <span class="breadcrumbs__link_current">Blog</span>
       </div>
 
       <section class="announce container">
         <h2 class="hidden">announce</h2>
         <ul class="announce__list">
-          <li class="announce__list-item">
+          <li class="announce__item">
             <a class="announce__link" href="#">
-              <img class="announce__link-bg" src="/../../static/images/top_5.jpg" alt="top 5 fastest growing it service companies in philly">
+              <img class="announce__img" src="/../../static/images/top_5.jpg" alt="top 5 fastest growing it service companies in philly">
               <span class="announce__date">23rd August 2018</span> 
               <h2 class="announce__title">Top 5 fastest growing it service companies in philly</h2>
             </a>
@@ -35,9 +35,9 @@
               service providers in the given marketplace.
             </p>
           </li>
-          <li class="announce__list-item">
+          <li class="announce__item">
             <a class="announce__link" href="#">
-              <img src="/../../static/images/financial.jpg" alt="best financial" class="announce__link-bg">
+              <img class="announce__img" src="/../../static/images/financial.jpg" alt="best financial">
               <span class="announce__date">23rd August 2018</span> 
               <h2 class="announce__title">Best financial</h2>
             </a>
@@ -46,9 +46,9 @@
               Growing Companies 2019 in Philadelphia, according to Growjo's ranking.
             </p>
           </li>
-          <li class="announce__list-item">
+          <li class="announce__item">
             <a class="announce__link" href="#">
-              <img src="/../../static/images/company.jpg" alt="Company logo or brand identity: which one is more important? brand identity" class="announce__link-bg">
+              <img class="announce__img" src="/../../static/images/company.jpg" alt="Company logo or brand identity: which one is more important? brand identity">
               <span class="announce__date">23rd August 2018</span> 
               <h2 class="announce__title">Company logo or brand identity: which one is more important? brand identity</h2>
             </a>
@@ -57,9 +57,9 @@
               Here are our simple, but affective, SEO tips for small business success.
             </p>
           </li>
-          <li class="announce__list-item">
+          <li class="announce__item">
             <a class="announce__link" href="#">
-              <img src="/../../static/images/best_fin.jpg" alt="best financial" class="announce__link-bg">
+              <img class="announce__img" src="/../../static/images/best_fin.jpg" alt="best financial">
               <span class="announce__date">23rd August 2018</span> 
               <h2 class="announce__title">Best financial</h2>
             </a>
@@ -68,9 +68,9 @@
               Growing Companies 2019 in Philadelphia, according to Growjo's ranking.
             </p>
           </li>
-          <li class="announce__list-item">
+          <li class="announce__item">
             <a class="announce__link" href="#">
-              <img src="/../../static/images/princess.jpg" alt="Company logo or brand identity: which one is more important? brand identity" class="announce__link-bg">
+              <img class="announce__img" src="/../../static/images/princess.jpg" alt="Company logo or brand identity: which one is more important? brand identity">
               <span class="announce__date">23rd August 2018</span> 
               <h2 class="announce__title">Company logo or brand identity: which one is more important? brand identity</h2>
             </a>
@@ -79,9 +79,9 @@
               Here are our simple, but affective, SEO tips for small business success.
             </p>
           </li>
-          <li class="announce__list-item">
+          <li class="announce__item">
             <a class="announce__link" href="#">
-              <img src="/../../static/images/fastes_5.jpg" alt="top 5 fastest growing it service companies in philly" class="announce__link-bg">
+              <img class="announce__img" src="/../../static/images/fastes_5.jpg" alt="top 5 fastest growing it service companies in philly">
               <span class="announce__date">23rd August 2018</span> 
               <h2 class="announce__title">Top 5 fastest growing it service companies in philly</h2>
             </a>
@@ -93,31 +93,10 @@
           </li>
         </ul>
 
-        <div class="announce__pages">
-          <a href="#" class="announce__link pages_prev">
-            <img class="announce__img-prev" src="/../../static/images/next-prev-pages.png" alt="vector">
-          </a>
-          <ul class="announce__pages-list">
-            <li class="announce__list-item">
-              <a href="#" class="announce__link page active">1</a>
-            </li>
-            <li class="announce__list-item">
-              <a href="#" class="announce__link page">2</a>
-            </li>
-            <li class="announce__list-item">
-              <a href="#" class="announce__link page">3</a>
-            </li>
-            <li class="announce__list-item">
-              <a href="#" class="announce__link page">4</a>
-            </li>
-          </ul>
-          <a href="#" class="announce__link pages_next">
-            <img class="announce__img-next" src="/../../static/images/next-prev-pages.png" alt="vector">
-          </a>
-        </div>
+        @@include('link-pages/index.html')
       </section>
     </main>
     @@include('footer/index.html')
-    <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
