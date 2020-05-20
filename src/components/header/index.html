@@ -1,7 +1,19 @@
 <header class="header-main container-back">
   <div class="header container">
     <a class="header__logo" href="/">
-      <img class="header__logo-img" src="/static/images/logo.png" alt="logo">
+      <picture>
+        <source 
+          media="(max-width: 450px)"
+          srcset="/static/images/logo-mobile_1x.png?1 1x, /static/images/logo-mobile_2x.png?1 2x">
+        <source
+          media="(max-width: 768px)" 
+          srcset="/static/images/logo-tablet_1x.png?1 1x, /static/images/logo-tablet_2x.png?1 2x" >
+        <img
+          srcset="/static/images/logo_1x.png?2 1x, /static/images/logo_2x.png?2 2x"
+          src="/static/images/logo_1x.png?2"
+          class="header__logo-img" 
+          alt="logo">
+      </picture>
     </a>
     <nav class="header__nav">
       <ul class="header__list">
@@ -14,10 +26,38 @@
         <li><a class="header__item" href="/pages/svg-animation/index.html">SVG-ANIMATION</a></li>
         <li><a class="header__item" href="/pages/grid/index.html">GRID</a></li>
       </ul>
+      <button class="header__button-mobile header__button-mobile_js">MENU</button>
       <ul class="header__links">
         <li><a class="header__search" href="#"><img src="/static/images/search.svg" alt="Search"/></a></li>
         <li><a class="header__contact" href="/pages/contact-us/index.html">CONTACT US</a></li>
       </ul>
     </nav>
+  </div>
+
+  <div class="mobile-header">
+    <div class="mobile-header__content">
+    
+      <div class="mobile-header__cap">
+        <a class="mobile-header__logo" href="/">
+          <img class="mobile-header__logo-img" src="/static/images/logo-mobile_1x.png" alt="logo">
+        </a>
+        <button class="mobile-header__close mobile-header__close_js" type="button" value="closed"></button>
+        <a class="mobile-header__search" href="#"><img src="/static/images/search.svg" alt="Search"/></a>
+      </div>
+      
+      <nav class="mobile-header__nav">
+        <ul class="mobile-header__list">
+          <li><a class="mobile-header__item" href="/pages/blog/index.html">BLOG</a></li>
+          <li><a class="mobile-header__item" href="/pages/catalog/index.html">CATALOG</a></li>
+          <li><a class="mobile-header__item" href="/pages/toys/index.html">TOYS</a></li>
+          <li><a class="mobile-header__item" href="#">ABOUT US</a></li>
+          <li><a class="mobile-header__item" href="/pages/animation/index.html">ANIMATION</a></li>
+          <li><a class="mobile-header__item" href="/pages/svg/index.html">SVG</a></li>
+          <li><a class="mobile-header__item" href="/pages/svg-animation/index.html">SVG-ANIMATION</a></li>
+          <li><a class="mobile-header__item" href="/pages/grid/index.html">GRID</a></li>
+        </ul>
+      </nav>
+      <a class="mobile-header__contact" href="/pages/contact-us/index.html">CONTACT US</a>
+    </div>
   </div>
 </header>

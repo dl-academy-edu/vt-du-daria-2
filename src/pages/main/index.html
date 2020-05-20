@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/../common.css">
     <link rel="stylesheet" href="/style.css">
     <link rel="shortcut icon" href="/../../static/images/favicon.ico">
     <title>Designe Life Kids</title>
+    <meta name="desciption" content="Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.">
+    <meta name="keywords" content="toys for kids, apparel kids, holiday shop, accesseories">
   </head>
   
   <body>
@@ -33,8 +36,19 @@
               "class": "slider__link button slider__link_js"
             })
           </div>
-  
-          <img class="slider__img" src="/../../static/images/monster.png" alt="monster in a wheelbarrow">
+          <picture>
+            <source 
+              media="(max-width: 767px)"
+              srcset="/../../static/images/monster-mobile_1x.png?1 1x, /../../static/images/monster-mobile_2x.png?1 2x">
+            <source
+              media="(max-width: 1265px)" 
+              srcset="/../../static/images/monster-tablet_1x.png?1 1x, /../../static/images/monster-tablet_2x.png?1 2x" >
+            <img
+              srcset="/../../static/images/monster_1x.png?2 1x, /../../static/images/monster_2x.png?1 2x"
+              src="/../../static/images/monster_1x.png?2"
+              class="slider__img" 
+              alt="monster in a wheelbarrow">
+          </picture>
         </div>
         <div class="slider__text-addit">
           Free (continental) USA shipping on all orders of $100 USD or more!
@@ -43,23 +57,23 @@
 
       <section class="goods container">
         <h2 class="goods__title">CATEGORY PRODUCTS</h2>
-        <ul class="goods__list">
-          <li class="goods__item">
+        <ul class="row">
+          <li class="goods__item col-xl-3 col-lg-4">
             <a class="goods__link" href="/pages/catalog/index.html" style="background-image: url(/../../static/images/kids.png); background-color: #DBE4DB;">
               <span class="goods__link-title">APPAREL KIDS</span>
             </a>
           </li>
-          <li class="goods__item">
+          <li class="goods__item col-xl-3 col-lg-4">
             <a class="goods__link" href="/pages/catalog/index.html" style="background-image: url(/../../static/images/holiday.png); background-color: rgba(186, 142, 107, 0.3);">
               <span class="goods__link-title">HOLIDAY SHOP</span>
             </a>
           </li>
-          <li class="goods__item">
+          <li class="goods__item col-xl-3 col-lg-4">
             <a class="goods__link" href="/pages/toys/index.html" style="background-image: url(/../../static/images/toys.png); background-color: #F8F2DA;">
               <span class="goods__link-title">TOYS</span>
             </a>
           </li>
-          <li class="goods__item">
+          <li class="goods__item col-xl-3 col-lg-4">
             <a class="goods__link" href="/pages/catalog/index.html" style="background-image: url(/../../static/images/accesseories.png); background-color: rgba(9, 3, 79, 0.17);">
               <span class="goods__link-title">ACCESSORIES</span>
             </a>
@@ -91,30 +105,42 @@
       </section>
 
       <section class="additional-inform container">
-          <img class="additional-inform__img" src="/../../static/images/woman.jpg" alt="Image with a woman">
+        <picture>
+          <source 
+            media="(max-width: 560px)"
+            srcset="/../../static/images/woman-mobile_1x.jpg?1 1x, /../../static/images/woman-mobile_2x.jpg?1 2x">
+          <source
+            media="(max-width: 1060px)" 
+            srcset="/../../static/images/woman-tablet_1x.jpg?1 1x, /../../static/images/woman-tablet_2x.jpg?1 2x" >
+          <img
+            srcset="/../../static/images/woman_1x.jpg?2 1x, /../../static/images/woman_2x.jpg?1 2x"
+            src="/../../static/images/woman_1x.jpg?2"
+            class="additional-inform__img" 
+            alt="image of the company's founder">
+        </picture>
 
-          <div class="additional-inform__inner">
-            <h2 class="additional-inform__title">DELIVERY</h2>
-  
-            <div class="additional-inform__menu">
-              <button type="button" class="additional-inform__button additional-inform__button_active">Delivery</button>
-              <button type="button" class="additional-inform__button">Guarantee</button>
-              <button type="button" class="additional-inform__button">Credit</button>
-            </div>
-  
-            <div class="additional-inform__content">
-              <p class="additional-inform__text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely
-                shocked that four years have flown by. It's simply magical.</p>
-              <p class="additional-inform__text">What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly happy place
-                for me and i have you and all of the beautiful designers that we work with to thank!</p>
+        <div class="additional-inform__inner">
+          <h2 class="additional-inform__title">DELIVERY</h2>
 
-                @@include('link-button/index.html',{
-                  "text": "LEARN MORE",
-                  "href": "#",
-                  "class": "additional-inform__link"
-                })
-            </div>
+          <div class="additional-inform__menu">
+            <button type="button" class="additional-inform__button additional-inform__button_active">Delivery</button>
+            <button type="button" class="additional-inform__button">Guarantee</button>
+            <button type="button" class="additional-inform__button">Credit</button>
           </div>
+
+          <div class="additional-inform__content">
+            <p class="additional-inform__text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely
+              shocked that four years have flown by. It's simply magical.</p>
+            <p class="additional-inform__text">What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly happy place
+              for me and i have you and all of the beautiful designers that we work with to thank!</p>
+
+              @@include('link-button/index.html',{
+                "text": "LEARN MORE",
+                "href": "#",
+                "class": "additional-inform__link"
+              })
+          </div>
+        </div>
       </section>
 
       <section class="partners container">
@@ -122,22 +148,22 @@
         <ul class="partners__list">
           <li>
             <a class="partners__list-item" href="#">
-              <img class="partners__img" src="/../../static/images/mail.png" alt="mail">
+              <img class="partners__img" src="/../../static/images/mail.png" alt="logo of mail" style="width:100%; max-width:193px; height:auto;">
             </a>
           </li>
           <li>
             <a class="partners__list-item" href="#">
-              <img class="partners__img" src="/../../static/images/apple.png" alt="apple">
+              <img class="partners__img" src="/../../static/images/apple.png" alt="logo of apple" style="width:100%; max-width:179px; height:auto;">
             </a>
           </li>
           <li>
             <a class="partners__list-item" href="#">
-              <img class="partners__img" src="/../../static/images/eltex.png" alt="eltex">
+              <img class="partners__img" src="/../../static/images/eltex.png" alt="logo of eltex" style="width:100%; max-width:216px; height:auto">
             </a>
           </li>
           <li>
             <a class="partners__list-item" href="#">
-              <img class="partners__img" src="/../../static/images/owox.png" alt="owox">
+              <img class="partners__img" src="/../../static/images/owox.png" alt="logo of owox" tyle="width:100%; max-width:211px; height:auto">
             </a>
           </li>
         </ul>
@@ -153,7 +179,7 @@
             that four years have flown by. It's simply magical.
           </p>
           @@include('link-button/index.html',{
-            "text": "BY NOW",
+            "text": "BUY NOW",
             "href": "#",
             "class": "about-us__link"
           })
@@ -171,43 +197,44 @@
     </main>
 
     @@include('footer/index.html')
+    @@include('backsound/index.html')
 
     <div class="modal-bg modal-bg_close modal-bg_js">
-      <form class="modal-window" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
-        <label class="modal-window__label" for="user-name"> Name</label>
-        <input class="modal-window__input modal-window__input_js" id="user-name" type="text" name="name">
-        
-        <div class="modal-window__user">
-          <div class="modal-window__inform">
-            <label class="modal-window__label" for="user-phone">Phone</label>
-            <input class="modal-window__input" id="user-phone" type="text" name="phone">
-          </div>
-
-          <div class="modal-window__inform">
-            <label class="modal-window__label" for="user-email">Email</label>
-            <input class="modal-window__input" id="user-email" type="email" name="email">
-          </div>
-        </div>
-        
-        <label class="modal-window__label" for="user-message">Message</label>
-        <textarea class="modal-window__input" id="user-message" name="message"></textarea>
+        <form class="modal-window" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+          <label class="modal-window__label" for="user-name"> Name</label>
+          <input class="modal-window__input modal-window__input_js" id="user-name" type="text" name="name">
+          
+          <div class="modal-window__user">
+            <div class="modal-window__inform">
+              <label class="modal-window__label" for="user-phone">Phone</label>
+              <input class="modal-window__input" id="user-phone" type="text" name="phone">
+            </div>
   
-        <fieldset class="modal-window__fieldset">
-          <label class="modal-window__lable">
-            <input class="modal-window__accept hidden" type="checkbox" name="accept" value="accept">
-            <span class="modal-window__click"></span>
-            <span class="modal-window__text">By click on the button, you concent to the processing of you personal data</span>
-          </label>
-        </fieldset>
-        @@include('button/index.html',{
-          "text": "SUBMIT",
-          "class": "modal-window__button",
-          "type": "submit",
-          "value": "submit"
-        })
-        <button class="modal-window__close modal-window__close_js" type="button" value="closed"></button>
-      </form>
-    </div>
+            <div class="modal-window__inform">
+              <label class="modal-window__label" for="user-email">Email</label>
+              <input class="modal-window__input" id="user-email" type="email" name="email">
+            </div>
+          </div>
+          
+          <label class="modal-window__label" for="user-message">Message</label>
+          <textarea class="modal-window__input" id="user-message" name="message"></textarea>
+    
+          <fieldset class="modal-window__fieldset">
+            <label class="modal-window__lable">
+              <input class="modal-window__accept hidden" type="checkbox" name="accept" value="accept">
+              <span class="modal-window__click"></span>
+              <span class="modal-window__text">By click on the button, you concent to the processing of you personal data</span>
+            </label>
+          </fieldset>
+          @@include('button/index.html',{
+            "text": "SUBMIT",
+            "class": "modal-window__button",
+            "type": "submit",
+            "value": "submit"
+          })
+          <button class="modal-window__close modal-window__close_js" type="button" value="closed"></button>
+        </form>
+      </div>
     <script src="index.js"></script>
   </body>
 </html>

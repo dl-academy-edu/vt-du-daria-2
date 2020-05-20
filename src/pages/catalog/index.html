@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/../common.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/../../static/images/favicon.ico">
     <title>Catalog / Designe Life Kids</title>
+    <meta name="desciption" content="catalog products. Apparel kids. Holiday shop. Toys. Accesseories. Sale. Apparel adults">
+    <meta name="keywords" content="apparel kids, holiday shop, toys, accesseories, sale products, apparel adults">
   </head>
 
   <body>
@@ -14,45 +17,48 @@
     <main class="main container-back">
       <h1 class="title container">CATEGORY PRODUCTS</h1>
 
-      <div class="breadcrumbs container">
-        <a class="breadcrumbs__link" href="/">Home</a>
-        <div class="vector"></div>
-        <span class="breadcrumbs__link_current">Catalog</span>
-      </div>
+      <ul class="breadcrumbs container">
+        <li class="breadcrumbs__etem">
+          <a class="breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="breadcrumbs__etem">
+          <span class="breadcrumbs__link breadcrumbs__link_current">Catalog</span>
+        </li>
+      </ul>
 
       <section class="goods container">
         <h2 class="hidden">Goods</h2>
-        <ul class="goods__list">
-          <li class="goods__item">
+        <ul class="row flex-wrap">
+          <li class="goods__item col-xl-3 col-lg-4 col-md-4 col-sm-4 col-xs-6">
             <a class="goods__link" href="#" style="background-image: url(/../../static/images/kids.png); background-color: #DBE4DB;">
               <span class="goods__link-title">APPAREL KIDS</span>
-            </a>
+            </a>              
           </li>
-          <li class="goods__item">
+          <li class="goods__item col-xl-3 col-lg-4 col-md-4 col-sm-4 col-xs-6">
             <a class="goods__link" href="#" style="background-image: url(/../../static/images/holiday.png); background-color: rgba(186, 142, 107, 0.3);">
               <span class="goods__link-title">HOLIDAY SHOP</span>
             </a>
           </li>
-          <li class="goods__item">
+          <li class="goods__item col-xl-3 add-xl-3 col-lg-4 col-md-4 col-sm-4 col-xs-6">
             <a class="goods__link" href="/pages/toys/index.html" style="background-image: url(/../../static/images/toys.png); background-color: #F8F2DA;">
               <span class="goods__link-title">TOYS</span>
             </a>
           </li>
-          <li class="goods__item">
+          <li class="goods__item col-xl-3 skip-xl-2 col-lg-4 col-md-4 col-sm-4 col-xs-6">
             <a class="goods__link" href="#" style="background-image: url(/../../static/images/accesseories.png); background-color: rgba(9, 3, 79, 0.17);">
               <span class="goods__link-title">ACCESSORIES</span>
             </a>
           </li>
-          <li class="goods__item">
+          <li class="goods__item col-xl-3 col-lg-4 col-md-4 col-sm-4 col-xs-6">
             <a href="#" class="goods__link" style="background-image: url(/../../static/images/sale.png); background-color: rgba(207, 68, 111, 0.25);">
               <span class="goods__link-title">SALE</span>
             </a>
           </li>
-          <li class="goods__item">
+          <li class="goods__item col-xl-3 col-lg-4 col-md-4 col-sm-4 col-xs-6">
             <a href="#" class="goods__link" style=" background-image: url(/../../static/images/adults.png); background-color: rgba(125, 151, 218, 0.2);">
               <span class="goods__link-title">APPAREL ADULTS</span>
             </a>
-          </li> 
+          </li>
         </ul>
       </section>
 

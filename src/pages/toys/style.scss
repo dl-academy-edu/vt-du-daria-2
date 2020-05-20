@@ -14,21 +14,42 @@ fieldset {
 }
 
 .selection {
-  padding: 42px 110px 25px;
+  padding: 42px 10% 25px;
   margin-top: 44px;
   background: rgba(125, 151, 218, 0.2);
+
+  @media (max-width: 768px) {
+    padding: 30px 8%;
+    margin-top: 17px;
+  }
+
+  @media (max-width: 375px) {
+    padding: 24px 5%;
+    margin-top: 11px;
+  }
   
   &__form {
     display: flex;
     flex-wrap: wrap;
     font-size: 16px;
     line-height: 22px;
+
+    @media (max-width: 375px) {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 }
 
 .range {
   width: 233px;
   @extend %padding-margin;
+
+  @media (max-width: 480px) {
+    padding-bottom: 25px;
+    width: 100%;
+    display: flex;
+  }
 
   &__title {
     @extend %font-title;
@@ -65,7 +86,12 @@ fieldset {
 
 .color {
   @extend %padding-margin;
-  padding-left: 68px;
+  margin-left: 6%;
+
+  @media (max-width: 480px) {
+    margin-left: 0;
+    margin-top: -5px;
+  }
 
   &__title {
     @extend %font-title;
@@ -74,10 +100,19 @@ fieldset {
   &__list {
     margin: 0;
     padding: 15px 0 0;
+
+    @media (max-width: 480px) {
+      padding-top: 10px;
+    }
   }
 
   &__etem {
     padding-bottom: 15px;
+
+    @media (max-width: 480px) {
+      padding-bottom: 10px;
+
+    }
   }
 
   &__label {
@@ -127,7 +162,16 @@ fieldset {
 
 .delivery {
   @extend %padding-margin;
-  padding-left: 94px;
+  margin-left: 9%;
+
+  @media (max-width: 768px) {
+    margin-left: 9%;
+  }
+
+  @media (max-width: 480px) {
+    margin-left: 22%;
+    margin-top: -5px;
+  }
 
   &__title {
     @extend %font-title;
@@ -180,6 +224,16 @@ fieldset {
   min-width: 250px;
   margin-left: 39px;
 
+  @media (max-width: 768px) {
+    margin-left: 0;
+    padding-top: 10px;
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 20px;
+    padding-bottom: 16px;
+  }
+
   &__title {
     @extend %font-title;
   }
@@ -229,6 +283,15 @@ fieldset {
   width: 95px;
   margin-top: 35px;
   margin-left: 50px;
+
+  @media (max-width: 1194px) {
+    margin-left: 200px;
+    margin-top: 39px;
+  }
+
+  @media (max-width: 656px) {
+    margin: auto;
+  }
 }
 
 .goods {
@@ -241,14 +304,35 @@ fieldset {
     margin: 0;
     padding-left: 0;
     padding-top: 62px;
+
+    @media (max-width: 768px) {
+      padding-top: 48px;
+    }
+
+    @media (max-width: 480px) {
+      padding-top: 42px;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-    width: 380px;
+    max-width: 380px;
+    width: 27.8vw;
     padding-bottom: 45px;
     align-items: center;
+
+    @media (max-width: 768px) {
+      padding-bottom: 26px;
+    }
+
+    @media (max-width: 375px) {
+      padding-bottom: 24px;
+    }
+
+    @media (max-width: 450px) {
+      width: 50%;
+    }
   }
 
   &__link {
@@ -256,20 +340,28 @@ fieldset {
     position: relative;
 
     &-title {
+      display: inline-block;
+      width: 100%;
+      max-width: 255px;
+      height: 33px;
       font-size: 14px;
       line-height: 19px;
       color: #1E0606;
+
+      @media (max-width: 768px) {
+        font-size: 12px;
+        line-height: 16px;
+      }
     }
   }
 
   &__hover {
     position: absolute;
+    display: flex;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    width: 207px;
-    height: 207px;
+    width: 50%;
+    height: 50%;
     align-items: center;
     justify-content: center;
     color: #000000;
@@ -279,10 +371,22 @@ fieldset {
     font-size: $fs-title-link;
     background-color: #E5EAF8;;
     opacity: 0;
+    transform: translate(-50%, -50%);
     transition: $transition-duration;
+
+    @media (max-width: 450px) {
+      width: 50%;
+      height: 36%;
+      font-size: 20px;
+    }
   }
 
   &__link:hover > &__hover {
+    opacity: 0.9;
+    transition: $transition-duration;
+  }
+
+  &__link:focus > &__hover {
     opacity: 0.9;
     transition: $transition-duration;
   }
@@ -293,10 +397,19 @@ fieldset {
   }
   
   &__price {
-    padding-top: 17px;
     font-family: $primary-font;
     font-weight: bold;
     font-size: $fs-primary;
     line-height: 22px;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 }

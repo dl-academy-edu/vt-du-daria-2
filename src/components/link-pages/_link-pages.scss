@@ -2,9 +2,13 @@
 
 .pages {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   padding-bottom: 43px; 
   align-items: center;
+
+  @media (max-width: 375px) {
+    padding-bottom: 50px;
+  }
   
   &__list {
     display: flex;
@@ -18,6 +22,12 @@
     font-size: $fs-primary;
     line-height: 20px;
     color: #1E0606;
+
+    @media (max-width: 375px) {
+      font-size: 14px;
+      line-height: 17px;
+      width: 188px;
+    }
   }
 
   &__link {
@@ -40,7 +50,6 @@
 
 .prev {
   padding-left: 20px;
-  padding-right: 20px;
   width: 18px;
   height: 18px;
   background-color: transparent;

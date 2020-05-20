@@ -1,6 +1,6 @@
 
 /* Global styles */
-@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700/Montserrat:400,700,900/Open+Sans:400,700/Roboto:400,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700/Montserrat:400,700,900/Open+Sans:400,700/Roboto:400,700,900/Lato:ital,wght@0,400;0,700;0,900;1,700&display=swap");
 
 body { 
   font-family: 'Open Sans', sans-serif;
@@ -38,14 +38,23 @@ img {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto; 
-  background-color: #FFFFFF;
+  background-color: #FFFFFF; 
 }
 
 .container {
-  width: 100%;
   max-width: 1220px;
   padding: 0 20px;
   margin: 0 auto; 
+
+  @media (max-width: 1265px) {
+    // padding: 0 60px;
+    padding: 0 8%;
+  }
+
+  @media (max-width: 375px) {
+    // padding: 0 60px;
+    padding: 0 5%;
+  }
 }
 
 .hidden {
@@ -60,12 +69,26 @@ img {
 
 .title {
   padding-bottom: 4px;
-  padding-top: 22px;
+  padding-top: 15px;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
   line-height: 49px;
+
+  @media (max-width: 768px) {
+    padding-top: 35px;
+  }
+
+  @media (max-width: 535px) {
+    // margin-left: 5px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  @media (max-width: 450px) {
+    padding-top: 18px;
+  }
 }
 
 //connecting components
@@ -75,3 +98,4 @@ img {
 @import "./link-button/link-button";
 @import "./link-pages/link-pages";
 @import "./footer/footer";
+@import "./setting-grid";
