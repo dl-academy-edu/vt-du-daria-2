@@ -273,10 +273,10 @@
   &__slider {
     display: flex;
     padding-top: 30px;
+    margin-bottom: 6px;
     font-family: $primary-font;
     font-size: $fs-primary;
     line-height: 22px;
-    margin-bottom: 6px;
 
     @media (max-width: 450px) {
       padding-top: 22px;
@@ -446,7 +446,6 @@
       @media (max-width: 850px) {
         padding-left: 16px;
         margin-left: -15px;
-        width: 100%;
         max-width: 267px;
         height: 45px;
       }
