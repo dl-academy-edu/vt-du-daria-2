@@ -10,7 +10,6 @@ $size-sm: 560px;
 	@if $max == 0 {
 		$max: 9999px;
 	}
-
 	@media (min-width: ($min + 1px)) and (max-width: $max) {
 		@content;
 	}
@@ -18,14 +17,12 @@ $size-sm: 560px;
 
 @mixin create-grid ($type) {
   @for $i from 1 through $numberColumns {
-		.col-#{$type}-#{$i} {
-		  width: (100% / $numberColumns) * $i;
-		}
-
-		.skip-#{$type}-#{$i} {
-		  margin-left: (100% / $numberColumns) * $i;
+    .col-#{$type}-#{$i} {
+      width: (100% / $numberColumns) * $i;
     }
-    
+    .skip-#{$type}-#{$i} {
+      margin-left: (100% / $numberColumns) * $i;
+    }
 		.add-#{$type}-#{$i} {
 		  margin-right: (100% / $numberColumns) * $i;
 		}

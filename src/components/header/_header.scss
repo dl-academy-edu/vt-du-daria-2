@@ -43,6 +43,7 @@
     &:hover {
       opacity: 0.5;
       cursor: pointer;
+      transition: $transition-duration;
     }
   }
 
@@ -73,6 +74,10 @@
     &:hover {
       opacity: 0.5;
     }
+
+    &:active {
+      opacity: 0.2;
+    }
   }
 
   &__links {
@@ -99,6 +104,10 @@
     &:hover {
       opacity: 0.5;
     }
+
+    &:active {
+      opacity: 0.2;
+    }
   }
 
   &__contact {
@@ -112,6 +121,10 @@
       opacity: 0.5;
     }
 
+    &:active {
+      opacity: 0.2;
+    }
+
     @media (max-width: 768px) {
       display: none;
     }
@@ -123,7 +136,7 @@
     background-color: transparent;
     
     @media (max-width: 768px) {
-      display: initial;//стандартное значение
+      display: initial;
       margin: 0 auto;
     }
   }
@@ -248,7 +261,6 @@
   &__contact {
     display: block;
     text-align: center;
-    // width: 320px;
     margin-top: 15px;
     color: $color_text-header;
     font-weight: bold;

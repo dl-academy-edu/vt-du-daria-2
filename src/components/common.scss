@@ -1,16 +1,15 @@
 
 /* Global styles */
 @import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700/Montserrat:400,700,900/Open+Sans:400,700/Roboto:400,700,900/Lato:ital,wght@0,400;0,700;0,900;1,700&display=swap");
+@import './consts';
 
 body { 
-  font-family: 'Open Sans', sans-serif;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   margin: 0;
   background-color: #F4F4F4;
 }
-
-$transition-duration: .4s;
 
 a { 
   text-decoration: none; 
@@ -68,7 +67,7 @@ img {
 .title {
   padding-bottom: 4px;
   padding-top: 15px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $secondary-font;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
@@ -76,6 +75,7 @@ img {
 
   @media (max-width: 768px) {
     padding-top: 35px;
+    padding-left: 8%;
   }
 
   @media (max-width: 535px) {

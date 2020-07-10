@@ -1,7 +1,7 @@
 @import "../../components/consts";
 
 .goods {
-  padding: 15px 0 13px;
+  padding: 5px 0 13px;
 
   @media (max-width: 375px) {
     padding: 8px 0 4px;
@@ -40,6 +40,16 @@
       text-decoration: underline;
     }
 
+    &-title {
+      display: block;
+      width: 160px; 
+      margin: 0 auto;
+      
+      @media (max-width: 445px) {
+        width: 127px;
+      }
+    }
+
     @media (max-width: 899px) {
       height: 196px;
       width: 203px;
@@ -55,15 +65,12 @@
       line-height: 22px;
     }
   }
+}
 
-  &__link-title {
-    display: block;
-    width: 160px; 
-    margin: 0 auto;
-    
-    @media (max-width: 445px) {
-      width: 127px;
-    }
+.row {
+  @media (max-width: 1270px) {
+    padding-left: 7%;
+    padding-right: 7%;
   }
 }
 
@@ -75,8 +82,8 @@
   @media (max-width: 1000px) {
     margin-left: 0;
     width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
   }
 
   @media (max-width: 768px) {

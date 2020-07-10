@@ -21,20 +21,20 @@
     padding-left: 5%;
   }
 
-
   @media (max-width: 450px) {
     font-size: 16px;
     line-height: 20px;
   }
 
   &__etem {
+    margin-right: 30px;
     position: relative;
 
     &::after, &::before {
       content: "";
       position: absolute;
-      margin-top: 11.1%;
-      margin-left: -20.6%;
+      top: 33%;
+      left: 135%;
       transform: rotate(45deg);
       height: 10px;
       width: 2px;
@@ -48,8 +48,8 @@
     }
 
     &::before {
-      margin-top: 4.3%;
-      margin-left: 79%;
+      left: 135%;
+      top: 6%;
       transform: rotate(-45deg);
 
       @media (max-width: 450px) {
@@ -72,16 +72,15 @@
   }
 
   &__link {
-    margin-right: 37px;
     color: #1E0606;
-    transition: color $transition-duration;
 
     &_current {
       opacity: 0.5;
     }
 
     &:hover {
-      opacity: 0.75;
+      opacity: 0.5;
+      transition: $transition-duration;
     }
   }
 }

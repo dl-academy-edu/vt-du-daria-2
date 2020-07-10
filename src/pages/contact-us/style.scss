@@ -14,6 +14,7 @@
     flex-direction: column;
     padding-top: 20px;
     padding-bottom: 50px;
+    align-items: center;
   }
 
   @media (max-width: 450px) {
@@ -54,21 +55,21 @@
     @media (max-width: 375px) {
       flex-wrap: wrap;
     }
-  }
 
-  &__user-inf {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 290px;
-    margin-right: 3%;
-
-    @media (max-width: 375px) {
-      margin-right: 0;
-    }
-
-    &:last-child {
-      margin-right: 0;
+    &-inf {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 290px;
+      margin-right: 3%;
+  
+      @media (max-width: 375px) {
+        margin-right: 0;
+      }
+  
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 
@@ -89,48 +90,48 @@
     }
   }
 
+  &__fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 20px;
+  }
+
   &__label {
     margin-bottom: 6px;
+    display: flex;
+    cursor: pointer;
 
     @media (max-width: 375px) {
       margin-bottom: 5px;
     }
   }
+  
+ &__lable {
+   display: flex;
+   align-items: center;
+ }
 
-  &__accept {
-    padding: 0;
-    margin: 0 0 20px;
-    
-    &-lable {
-      display: flex;
-      cursor: pointer;
-    }
-
-    @media (max-width: 375px) {
-      margin-bottom: 15px;
-    }
-
-    &-checkbox-click {
-      width: 19px;
-      height: 19px;
-      border: 2px solid #C29974;
-      border-radius: 3px;
-
-      &_active {
-        content: url("/../../static/images/accept.png");
-      }
-    }
+  &__click {
+    display: inline-block;
+    min-width: 19px;
+    height: 19px;
+    border: 2px solid #C29974;
+    border-radius: 3px;
   }
 
-  &__accept-checkbox:focus + &__accept-checkbox-click {
-    border: 2px solid rgb(141, 113, 90)
-  }
-    
-  &__accept-checkbox:checked + &__accept-checkbox-click::before {
+  &__accept:checked + &__click::before {
     content: url("/../../static/images/accept.png");
     margin: auto;
     width: 14px;
     height: 14px;
+  }
+
+  &__accept:focus + &__click {
+    border: 2px solid rgb(141, 113, 90)
+  }
+
+  &__accept:hover + &__click {
+    border: 2px solid rgb(141, 113, 90)
   }
 
   &__text {
@@ -151,10 +152,6 @@ textarea {
   height: 150px; 
   resize: none;
 } 
-  
-fieldset {
-  border: none;
-}
   
 .additional-inform {
   padding-left: 10%;

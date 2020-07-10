@@ -195,21 +195,24 @@
 }
 
 .social {
-  &__list {
-    display: flex;
-    width: 150px;
-    justify-content: space-between;
-    padding: 25px 0 0;
-    margin: 0;
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  padding: 25px 0 0;
+  margin: 0;
 
-    @media (max-width: 375px) {
-      padding-top: 18px;
-    }
+  @media (max-width: 375px) {
+    padding-top: 18px;
   }
-
+  
   &__item:hover {
     transition: $transition-duration;
     opacity: 0.5;
+  }
+
+  &__item:active {
+    transition: $transition-duration;
+    opacity: 0.2;
   }
 }
 
@@ -217,50 +220,45 @@
   @extend %style-addit;
   color: $color_text-footer;
 
-  @media (max-width: 768px) {
-    width: 100%;
-  }
   @media (max-width: 375px) {
     margin-top: 5px;
     margin-bottom: -17px;
   }
 
-  &__list {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    width: 245px;
-    float: left;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 245px;
+  float: left;
 
-    > label {
-      margin-left: 5px;
-      cursor: pointer;
-      margin-top: 5px;
-      fill: #FFFFFF;
-    }
-    
-    > input:hover ~ label,
-    > input:checked ~ label {
-      fill: #836E5B;;
-      cursor: pointer;
-    }
-
-    > input:checked ~ label {
-      fill:#C29974;
-    }
-
-    > input:focus ~ label {
-      box-shadow: 0 0 0 1.5px #79ABFE inset;
-      border-radius: 2px;
-    }
-
-    label:hover ~ p,
-    input:checked ~ p {
-      color: #C29974;
-      transition: $transition-duration;
-    }
+  > label {
+    margin-left: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    fill: #FFFFFF;
+  }
+  
+  > input:hover ~ label,
+  > input:checked ~ label {
+    fill: #836E5B;;
+    cursor: pointer;
   }
 
+  > input:checked ~ label {
+    fill:#C29974;
+  }
+
+  > input:focus ~ label {
+    box-shadow: 0 0 0 1.5px #79ABFE inset;
+    border-radius: 2px;
+  }
+
+  label:hover ~ p,
+  input:checked ~ p {
+    color: #C29974;
+    transition: $transition-duration;
+  }
+  
   &__title {
     margin-right: 12px;
   }
@@ -277,13 +275,10 @@
 
 .web-design {
   @extend %style-addit;
-    
-  &__link {
-    color: #AAAAAA;
-    &:hover {
-      transition: $transition-duration;
-      text-decoration: underline;
-      color: $color_text-footer;
-    }
+  color: #AAAAAA;
+  &:hover {
+    transition: $transition-duration;
+    text-decoration: underline;
+    color: $color_text-footer;
   }
 }

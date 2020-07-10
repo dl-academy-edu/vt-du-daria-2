@@ -6,7 +6,6 @@
   min-height: 411px;
 
   @media (max-width: 500px) {
-    margin-left: -20px;
     position: relative;
     width: 100%;
     margin: 0;
@@ -30,6 +29,10 @@
     @media (max-width: 650px){
       min-height: 431px;
     }
+
+    // @media (max-width: 410px){
+    //   padding-left: 5%;
+    // }
   }
 
   &__nav {
@@ -76,16 +79,20 @@
         margin-top: 9px;
       }
   
-      &:active, &:hover, &:focus {
+      &:hover, &:focus {
         background: rgba(30, 6, 6, 0.6);
         border: none;
         outline: none;
       }
-    }
 
-    &-button_active {
-      background: rgba(75, 71, 71, 0.6);
-      border: none;
+      &:active {
+        opacity: 0.5;
+      }
+
+      &_active {
+        background: rgba(75, 71, 71, 0.6);
+        border: none;
+      }
     }
   } 
 
@@ -101,7 +108,7 @@
       margin-left: -3px;
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: 410px) {
       order: 0;
       padding-top: 80px;
       margin-left: 20px;
@@ -142,6 +149,7 @@
   }
 
   &__link {
+    margin-bottom: 20px;
     width: 161px;
     @media (max-width: 375px) {
       width: 142px;
@@ -175,6 +183,11 @@
     text-transform: uppercase;
     color: #FFFFFF;
     background: #C29974;
+
+    @media (max-width: 565px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 }
 
@@ -347,7 +360,6 @@
 
 .next {
   @extend .prev;
-  transform: rotate(180deg);
 }
 
 .additional-inform {
@@ -425,7 +437,6 @@
     background-color: #FFFFFF;
     border: none;
     cursor: pointer;
-    transition: background-color $transition-duration;
     
     @media (max-width: 850px) {
       font-size: 24px;
@@ -453,6 +464,11 @@
     
     &:hover, &:focus {
       @extend .additional-inform__button_active;
+      transition: background-color $transition-duration;
+    }
+
+    &:active {
+      opacity: 0.75;
     }
   }
 
@@ -557,8 +573,12 @@
       }
     }
 
-    &-item:hover {
+    &-item:hover, &-item:active {
       opacity: 0.75;
+    }
+
+    &-item:active {
+      opacity: 0.4;
     }
   }
 
@@ -581,8 +601,12 @@
   font-size: $fs-primary;
   line-height: 22px;
 
+  @media (max-width: 1120px) {
+    padding-bottom: 80px;
+  }
+
   @media (max-width: 768px) {
-    padding-bottom: 52px;
+    padding-bottom: 80px;
   }
 
   @media (max-width: 375px) {
@@ -823,6 +847,11 @@
       margin-bottom: 14px;
     }
   }
+  
+  &__fieldset {
+    padding: 0;
+    margin: 0 0 20px;
+  }
 
   &__label {
     margin-bottom: 6px;
@@ -831,18 +860,14 @@
       margin-bottom: 5px;
     }
   }
-  
-  &__fieldset {
-    padding: 0;
-    margin: 0 0 20px;
-  }
 
   &__lable {
     display: flex;
-    cursor: pointer;
+    align-items: center;
   }
 
   &__click {
+    display: inline-block;
     min-width: 19px;
     height: 19px;
     border: 2px solid #C29974;

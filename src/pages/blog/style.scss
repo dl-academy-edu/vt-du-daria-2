@@ -88,4 +88,12 @@
   &__link:hover &__title {
     text-decoration: underline;
   }
+
+  &__link:active &__title {
+    opacity: 0.5;
+  }
+
+  &__link:active {
+    opacity: 0.5;
+  }
 }
