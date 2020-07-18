@@ -2,25 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/../common.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/../../static/images/favicon.ico">
     <title>Toys / Designe Life Kids</title>
+    <meta name="desciption" content="toys for kids from the company">
+    <meta name="keywords" content="toys">
   </head>
   
   <body>
     @@include('header/index.html')
     <main class="main container-back">
       <h1 class="title container">TOY FOR KIDS</h1>
-      
-      <div class="breadcrumbs container">
-        <a class="breadcrumbs__link" href="/">Home</a>
-        <div class="vector"></div>
-        <a class="breadcrumbs__link" href="/../pages/catalog/index.html">Catalog</a>
-        <div class="vector"></div>
-        <span class="breadcrumbs__link_current">Toys</span>
-      </div>
+
+
+      <ul class="breadcrumbs container">
+        <li class="breadcrumbs__etem">
+          <a class="breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="breadcrumbs__etem">
+          <a class="breadcrumbs__link" href="/../pages/catalog/index.html">Catalog</a>
+        </li>
+        <li class="breadcrumbs__etem">
+          <span class="breadcrumbs__link breadcrumbs__link_current">Toys</span>
+        </li>
+      </ul>
 
       <div class="selection">
         <form class="selection__form" action="#" method="POST">
@@ -39,8 +47,8 @@
             <ul class="color__list">
               <li class="color__etem">
                 <label class="color__label">
-                  <input class="input hidden" type="checkbox" name="color-black" value="black">
-                  <span class="click click_active"></span>
+                  <input class="input hidden" type="checkbox" name="color-black" value="black" checked>
+                  <span class="click"></span>
                   <span class="text">Black</span> 
                 </label>
               </li>
@@ -80,8 +88,8 @@
               </li>
               <li class="delivery__etem">
                 <label class="delivery__label">
-                  <input class="input hidden" type="radio" name="shipping" value="fast">
-                  <span class="clicker clicker_active"></span>
+                  <input class="input hidden" type="radio" name="shipping" value="fast" checked>
+                  <span class="clicker"></span>
                   <span class="text">Fast shipping</span>
                 </label>
               </li>
@@ -93,7 +101,7 @@
             <ul class="amount__list">
               <li>
                 <label class="amount__label">
-                  <input class="input hidden" type="radio" name="range" value="0-5">
+                  <input class="input hidden" type="radio" name="range" value="0-5" checked>
                   <span class ="value value_active">0-5</span>
                 </label>
               </li>
@@ -125,7 +133,20 @@
         <ul class="goods__list">
           <li class="goods__item">
             <a href="#" class="goods__link">
-              <img src="/../../static/images/sharkey.jpg" alt="SHARKY BEAN BAG CHAIR COVER" class="goods__link-bg">
+              <picture>
+                <source 
+                  media="(max-width: 375px)"
+                  srcset="/../../static/images/sharkey-mobile_1x.jpg?1 1x, /../../static/images/sharkey-mobile_2x.jpg?1 2x">
+                <source
+                  media="(max-width: 768px)" 
+                  srcset="/../../static/images/sharkey-tablet_1x.jpg?1 1x, /../../static/images/sharkey-tablet_2x.jpg?1 2x" >
+                <img
+                  srcset="/../../static/images/sharkey_1x.jpg?2 1x, /../../static/images/sharkey_2x.jpg?1 2x"
+                  src="/../../static/images/sharkey_1x.jpg?2" 
+                  alt="SHARKY BEAN BAG CHAIR COVER" 
+                  class="goods__link-bg">
+              </picture>
+              
               <span class="goods__hover">LEAN MORE</span>
               <span class="goods__link-title">SHARKY BEAN BAG CHAIR COVER</span>
             </a>
@@ -133,23 +154,62 @@
           </li>
           <li class="goods__item">
             <a href="#" class="goods__link">
-              <img src="/../../static/images/brass.jpg" alt="BRASS DECO FRAMES" class="goods__link-bg">
+              <picture>
+                <source 
+                  media="(max-width: 375px)"
+                  srcset="/../../static/images/brass-mobile_1x.jpg?1 1x, /../../static/images/brass-mobile_2x.jpg?1 2x">
+                <source
+                  media="(max-width: 768px)" 
+                  srcset="/../../static/images/brass-tablet_1x.jpg?1 1x, /../../static/images/brass-tablet_2x.jpg?1 2x" >
+                <img 
+                  srcset="/../../static/images/brass_1x.jpg?2 1x, /../../static/images/brass_2x.jpg?1 2x"
+                  src="/../../static/images/brass_1x.jpg" 
+                  alt="BRASS DECO FRAMES" 
+                  class="goods__link-bg">
+              </picture>
               <span class="goods__hover">LEAN MORE</span>
               <span class="goods__link-title">BRASS DECO FRAMES</span>
             </a>
             <span class="goods__price">&#36;66.00 USD</span>
           </li>
+
           <li class="goods__item">
             <a href="#" class="goods__link">
-              <img src="/../../static/images/cibo.jpg" alt="CIBO FULL APRON" class="goods__link-bg">
+              <picture>
+                <source 
+                  media="(max-width: 375px)"
+                  srcset="/../../static/images/cibo-mobile_1x.jpg?1 1x, /../../static/images/cibo-mobile_2x.jpg?1 2x">
+                <source
+                  media="(max-width: 768px)" 
+                  srcset="/../../static/images/cibo-tablet_1x.jpg?1 1x, /../../static/images/cibo-tablet_2x.jpg?1 2x" >
+                <img
+                  srcset="/../../static/images/cibo_1x.jpg?2 1x, /../../static/images/cibo_2x.jpg?1 2x"
+                  src="/../../static/images/cibo_1x.jpg?2"
+
+                  alt="CIBO FULL APRON" 
+                  class="goods__link-bg">
+              </picture>
               <span class="goods__hover">LEAN MORE</span>
               <span class="goods__link-title">CIBO FULL APRON</span>
             </a>
             <span class="goods__price">&#36;66.00 USD</span>
           </li>
+
           <li class="goods__item">
             <a href="#" class="goods__link">
-              <img src="/../../static/images/machine.jpg" alt="GATCHA GATCHA GUMBALL MACHINE" class="goods__link-bg">
+              <picture>
+                <source 
+                  media="(max-width: 375px)"
+                  srcset="/../../static/images/machine-mobile_1x.jpg?1 1x, /../../static/images/machine-mobile_2x.jpg?1 2x">
+                <source
+                  media="(max-width: 768px)" 
+                  srcset="/../../static/images/machine-tablet_1x.jpg?1 1x, /../../static/images/machine-tablet_2x.jpg?1 2x" >
+                <img
+                  srcset="/../../static/images/machine_1x.jpg?2 1x, /../../static/images/machine_2x.jpg?1 2x"
+                  src="/../../static/images/machine_1x.jpg?2"
+                  alt="GATCHA GATCHA GUMBALL MACHINE" 
+                  class="goods__link-bg">
+              </picture>
               <span class="goods__hover">LEAN MORE</span>
               <span class="goods__link-title">GATCHA GATCHA GUMBALL MACHINE</span>
             </a>
@@ -157,7 +217,19 @@
           </li>
           <li class="goods__item">
             <a href="#" class="goods__link">
-              <img src="/../../static/images/candle.jpg" alt="CHRISTMAS ADVENT SCENTED CANDLE" class="goods__link-bg">
+              <picture>
+                <source 
+                  media="(max-width: 375px)"
+                  srcset="/../../static/images/candle-mobile_1x.jpg?1 1x, /../../static/images/candle-mobile_2x.jpg?1 2x">
+                <source
+                  media="(max-width: 768px)" 
+                  srcset="/../../static/images/candle-tablet_1x.jpg?1 1x, /../../static/images/candle-tablet_2x.jpg?1 2x" >
+                <img
+                  srcset="/../../static/images/candle_1x.jpg?2 1x, /../../static/images/candle_2x.jpg?1 2x"
+                  src="/../../static/images/candle_1x.jpg?2"
+                  alt="CHRISTMAS ADVENT SCENTED CANDLE" 
+                  class="goods__link-bg">
+              </picture>
               <span class="goods__hover">LEAN MORE</span>
               <span class="goods__link-title">CHRISTMAS ADVENT SCENTED CANDLE</span>
             </a>
@@ -165,14 +237,25 @@
           </li>
           <li class="goods__item">
             <a href="#" class="goods__link">
-              <img src="/../../static/images/tangle.jpg" alt="TANGLE SPINNING TEA LIGHT" class="goods__link-bg">
+              <picture>
+                <source 
+                  media="(max-width: 375px)"
+                  srcset="/../../static/images/tangle-mobile_1x.jpg?1 1x, /../../static/images/tangle-mobile_2x.jpg?1 2x">
+                <source
+                  media="(max-width: 768px)" 
+                  srcset="/../../static/images/tangle-tablet_1x.jpg?1 1x, /../../static/images/tangle-tablet_2x.jpg?1 2x" >
+                <img
+                  srcset="/../../static/images/tangle_1x.jpg?2 1x, /../../static/images/tangle_2x.jpg?1 2x"
+                  src="/../../static/images/tangle_1x.jpg?2"
+                  alt="TANGLE SPINNING TEA LIGHT" 
+                  class="goods__link-bg">
+              </picture>
               <span class="goods__hover">LEAN MORE</span>
               <span class="goods__link-title">TANGLE SPINNING TEA LIGHT</span>
             </a>
             <span class="goods__price">&#36;56.00 USD</span>
           </li>
         </ul>
-
         @@include('link-pages/index.html')
       </section>
     </main>

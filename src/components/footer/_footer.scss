@@ -2,8 +2,17 @@
 
 %style-addit {
   display: flex;
-  width: 380px;
+  width: 100%;
+  max-width: 375px;
   padding-top: 7px;
+
+  @media (max-width: 1336px) {
+    width: initial;
+  }
+
+  @media (max-width: 375px) {
+    padding-top: 2px;
+  }
 }
 
 %padding-margin {
@@ -14,8 +23,8 @@
 .footer {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   width: 100%;
+  max-width: 1400px;
   font-family: $primary-font;
   font-size: $fs-primary;
   line-height: 22px;
@@ -23,13 +32,38 @@
 
   &__connect {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 98px 110px 13px;
+    padding: 80px 7.8% 13px;
+
+    @media (max-width: 768px) {
+      padding-bottom: 21px;
+    }
+
+    @media (max-width: 735px) {
+      flex-wrap: wrap;
+      padding-top: 70px;
+    }
+
+    @media (max-width: 375px) {
+      padding: 73px 5.8% 13px;
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   &__nav {
-    width: 389px;
+    width: 100%;
+    max-width: 420px;
+    margin-right: 2%;
+
+    @media (max-width: 735px) {
+      max-width: inherit;
+      margin-right: inherit;
+    }
+
+    @media (max-width: 375px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__titles {
@@ -39,6 +73,15 @@
 
   &__list {
     @extend %padding-margin;
+
+    @media (max-width: 735px) {
+      column-count: 2;
+    }
+
+    @media (max-width: 385px) {
+      column-count: 2;
+      margin-top: -9px;
+    }
   }
   
   &__titles::after {
@@ -46,11 +89,21 @@
     display: inline-block;
     vertical-align: middle;
     width: 100%;
+    max-width: 380px;
+    margin-right: 10px;
     height: 1px;
     margin-top: 23px;
     margin-bottom: 28px;
     background-color: #666666;
     border: none;
+
+    @media (max-width: 750px) {
+      max-width: inherit;
+    }
+
+    @media (max-width: 375px) {
+      width: 100%;
+    }
   }
 
   &__item {
@@ -72,7 +125,15 @@
   &__user {
     display:flex;
     flex-direction: column;
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
+
+    @media (max-width: 850px) {
+      max-width: inherit;
+    }
+    @media (max-width: 375px) {
+      margin-top: 18px;
+    }
   }
 
   &__additional::before {
@@ -90,7 +151,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 110px 100px;
+    padding: 0 7.8% 100px;
+
+    @media (max-width: 375px) {
+      padding: 35px 5.8% 100px;
+    }
   }
 }
 
@@ -98,8 +163,8 @@
   display: flex;
 
   &__input {
-    padding: 10px 10px;
-    width: 298px;
+    width: 100%;
+    padding: 0 19px;
     color: #FFFFFF;
     background-color: #666666;
     outline: none;
@@ -121,22 +186,33 @@
   }
 
   &__button-join {
-    width: 81px; 
+    width: 130px; 
+
+    @media (max-width: 375px) {
+      width: 89px; 
+    }
   }
 }
 
 .social {
-  &__list {
-    display: flex;
-    width: 150px;
-    justify-content: space-between;
-    padding: 25px 0 0;
-    margin: 0;
-  }
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  padding: 25px 0 0;
+  margin: 0;
 
+  @media (max-width: 375px) {
+    padding-top: 18px;
+  }
+  
   &__item:hover {
     transition: $transition-duration;
     opacity: 0.5;
+  }
+
+  &__item:active {
+    transition: $transition-duration;
+    opacity: 0.2;
   }
 }
 
@@ -144,42 +220,45 @@
   @extend %style-addit;
   color: $color_text-footer;
 
-  &__list {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    width: 245px;
-    float: left;
-
-    > label {
-      margin-left: 5px;
-      cursor: pointer;
-      margin-top: 5px;
-      fill: #FFFFFF;
-    }
-    
-    > input:hover ~ label,
-    > input:checked ~ label {
-      fill: #836E5B;;
-      cursor: pointer;
-    }
-
-    > input:checked ~ label {
-      fill:#C29974;
-    }
-
-    > input:focus ~ label {
-      box-shadow: 0 0 0 1.5px #79ABFE inset;
-      border-radius: 2px;
-    }
-
-    label:hover ~ p,
-    input:checked ~ p {
-      color: #C29974;
-      transition: $transition-duration;
-    }
+  @media (max-width: 375px) {
+    margin-top: 5px;
+    margin-bottom: -17px;
   }
 
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 245px;
+  float: left;
+
+  > label {
+    margin-left: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    fill: #FFFFFF;
+  }
+  
+  > input:hover ~ label,
+  > input:checked ~ label {
+    fill: #836E5B;;
+    cursor: pointer;
+  }
+
+  > input:checked ~ label {
+    fill:#C29974;
+  }
+
+  > input:focus ~ label {
+    box-shadow: 0 0 0 1.5px #79ABFE inset;
+    border-radius: 2px;
+  }
+
+  label:hover ~ p,
+  input:checked ~ p {
+    color: #C29974;
+    transition: $transition-duration;
+  }
+  
   &__title {
     margin-right: 12px;
   }
@@ -188,17 +267,18 @@
 .copyr {
   @extend %style-addit;
   color: $color_text-footer;
+
+  @media (max-width: 890px) {
+    width: initial;
+  }
 }
 
 .web-design {
   @extend %style-addit;
-    
-  &__link {
-    color: #AAAAAA;
-    &:hover {
-      transition: $transition-duration;
-      text-decoration: underline;
-      color: $color_text-footer;
-    }
+  color: #AAAAAA;
+  &:hover {
+    transition: $transition-duration;
+    text-decoration: underline;
+    color: $color_text-footer;
   }
 }

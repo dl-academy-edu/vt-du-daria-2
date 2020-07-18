@@ -1,17 +1,30 @@
 
-.main-scene {
-  margin-top: 2%;
-  // height: 868px;
-  padding-top: 21%;
-  padding-bottom: 41.5%;
-  overflow: hidden;
+%cloud-small {
+  max-width: 7%;
+  width: 7vw;
+}
+
+%cloud-medium {
+  max-width: 10%;
+  width: 10vw;
+}
+
+%cloud-big {
+  max-width: 13%;
+  width: 13vw;
+}
+
+.clouds {
   position: relative;
+  height: 10vw;
+  max-height: 150px;
+  overflow: hidden;
   z-index: 0;
 }
 
 .sun {
   position: absolute;
-  top: 5px;
+  top: 5%;
   left: 83%;
   z-index: 0;
   max-width: 68px;
@@ -19,8 +32,8 @@
 }
 
 @keyframes cloudmove-left {
-  0%   {left:  1400px;} 
-  100% {left: -200px;} 
+  0%   {left:  100%;} 
+  100% {left: -100%;} 
 } 
 
 .cloud {
@@ -30,104 +43,98 @@
 }
 
 .cloud-1 {
-  top: 86px;
+  top: 61%;
   animation: cloudmove-left 150s infinite;
-  max-width: 13%;
-  width: 13vw;
+  @extend %cloud-big;
 }
 
 .cloud-2 {
-  top: 105px;
+  top: 73%;
   animation: cloudmove-left 120s infinite;
-  max-width: 176px;
-  width: 13vw;
+  @extend %cloud-big;
 }
 
 .cloud-3 {
-  top: 20px;
+  top: 7%;
   animation: cloudmove-left 200s infinite;
-  max-width: 138px;
-  width: 10vw;
+  @extend %cloud-medium;
 }
 
 .cloud-4 {
-  top: 21px;
+  top: 15%;
   animation: cloudmove-left 150s infinite;
-  max-width: 95px;
-  width: 7vw;
+  @extend %cloud-small;
 }
 
 .cloud-5 {
-  top: 52px;
+  top: 33%;
   animation: cloudmove-left 200s infinite;
-  max-width: 95px;
-  width: 7vw;
+  @extend %cloud-small;
 }
 
 .cloud-6 {
-  top: 46px;
+  top: 46%;
   animation: cloudmove-left 130s infinite;
-  max-width: 176px;
-  width: 13vw;
+  @extend %cloud-big;
 }
 
 .cloud-7 {
-  top: 56px;
+  top: 31%;
   left: 25%;
-  max-width: 13%;
-  width: 13vw;
+  @extend %cloud-big;
 }
 
 .cloud-8 {
-  top: 105px;
+  top: 70%;
   left: 52%;
-  max-width: 176px;
-  width: 13vw;
+  @extend %cloud-big;
 }
 
 .cloud-9 {
-  top: 20px;
+  top: 16%;
   left: 44%;
-  max-width: 138px;
-  width: 10vw;
+  @extend %cloud-medium;
 }
 
 .cloud-10 {
-  top: 21px;
+  top: 4%;
   left: 6%;
-  max-width: 95px;
-  width: 7vw;
+  @extend %cloud-small;
 }
 
 .cloud-11 {
-  top: 52px;
+  top: 15%;
   left: 73%;
-  max-width: 95px;
-  width: 7vw;
+  @extend %cloud-small;
 }
 
 .cloud-12 {
-  top: 46px;
+  top: 32%;
   left: 90%;
-  max-width: 176px;
-  width: 13vw;
+  @extend %cloud-big;
 }
 
-//************************************************
+.main-scene {
+  height: 44.8vw;
+  max-height: 665px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
 .town {
   z-index: 0;
   position: absolute;
-  top: 143px;
 }
 
 @keyframes carmove {
-  0%   {left: -500px;} 
-  100% {left: 2000px;} 
+  0%   {left: -100%;} 
+  100% {left: 100%;} 
 } 
 
 .cars {
   position: relative;
-  top: 120px;
+  top: 38%;
 }
 
 .car {
@@ -135,15 +142,15 @@
 }
 
 .car-1 {
-  top: 28px;
-  animation: carmove 3s infinite;
+  margin-top: 4%;
+  animation: carmove 4s infinite;
   z-index: 1;
   max-width: 16%;
   width: 16vw;
 }
 
 .car-2 {
-  top: 3px;
+  margin-top: 2%;
   animation: carmove 6s infinite;
   z-index: 1;
   max-width: 17%;
@@ -151,7 +158,7 @@
 }
 
 .car-3 {
-  top: 43px;
+  margin-top: 5%;
   animation: carmove 8s infinite;
   z-index: 0;
   max-width: 17%;
@@ -160,7 +167,7 @@
 }
 
 .car-4 {
-  top: 5px;
+  margin-top: 2%;
   animation: carmove 4s infinite;
   max-width: 18%;
   width: 18vw;
@@ -168,10 +175,9 @@
   animation-timing-function: linear;
 }
 
-//************************************************
 .flashlight-1 {
   position: absolute;
-  top: 172px;
+  top: 6%;
   left: 31%;
   max-width: 11%;
   width: 11vw;
@@ -180,20 +186,19 @@
 
 .flashlight-2 {
   position: absolute;
-  top: 172px;
+  top: 6%;
   left: 93%;
   max-width: 11%;
   width: 11vw;
   z-index: 3;
 }
 
-//************************************************
 @keyframes taximove {
-  0%   {left:  1500px;} 
-  20%  {left:  1500px;}
-  58%  {left:  540px;}
-  80%  {left:  540px;}
-  100% {left: -1000px;} 
+  0%   {left:  100%;} 
+  20%  {left:  100%;}
+  58%  {left:  40%;}
+  80%  {left:  40%;}
+  100% {left: -100%;} 
 } 
 
 %message {
@@ -210,7 +215,7 @@
 
 .taxi {
   position: relative;
-  top: 100px;
+  top: 34%;
 
   &__body {
     position: absolute;
@@ -225,8 +230,7 @@
   &__message {
     position: absolute;
     margin-left: 62%;
-    // top: 40.5%;
-    top: -55px;
+    margin-top: -5%;
     max-width: 12%;
     width: 12vw;
     z-index: 6;
@@ -237,17 +241,15 @@
   }
 }
 
-//************************************************
 .flashlight-3 {
   position: absolute;
-  top: 180px;
+  top: 6%;
   margin-left: 73%;
   max-width: 15%;
   width: 15vw;
   z-index: 5;
 }
 
-//************************************************
 @keyframes hand-woman {
   0%  { 
     transform: rotate(0); 
@@ -262,13 +264,15 @@
   }
 }
 
-.woman {
+.passengers {
   position: relative;
-  top: 80px;
+  top: 35%;
+}
 
+.woman {
   &__body {
     position: absolute;
-    top: 0;
+    top: 1%;
     margin-left: 6%;
     max-width: 19%;
     width: 19vw;
@@ -276,9 +280,8 @@
   }
 
   &__hand {
-    position: absolute;
-    top: 214px;
-    right: 81%; 
+    margin-left: 14%;
+    margin-top: 15%;
     max-width: 4%;
     width: 4vw;
     z-index: 6;
@@ -290,7 +293,7 @@
 
   &__message {
     position: absolute;
-    top: 43%;
+    top: 3%;
     left: 6%;
     max-width: 11%;
     width: 11vw;
@@ -303,7 +306,6 @@
   }
 }
 
-//***********************************************
 @keyframes hand-man {
   0%  {
     transform: rotate(0);
@@ -320,7 +322,7 @@
 
 %man-message {
   position: absolute;
-  top: 33%;
+  top: -34%;
   margin-left: 19%;
   max-width: 170px;
   width: 12vw;
@@ -329,7 +331,7 @@
 .man {
   &__body {
     position: absolute;
-    top: 43%;
+    top: 2%;
     margin-left: 20%;
     max-width: 15%;
     width: 15vw;
@@ -338,7 +340,7 @@
   
   &__hand {
     position: absolute;
-    top: 52%;
+    top: 31%;
     left: 21%;
     max-width: 6%;
     width: 6vw;

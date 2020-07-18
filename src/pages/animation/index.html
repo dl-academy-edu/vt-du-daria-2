@@ -2,24 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/../common.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/../../static/images/favicon.ico">
     <title>Animation / Designe Life Kids</title>
+    <meta name="desciption" content="animation from the company">
+    <meta name="keywords" content="animation">
   </head>
   <body>
     @@include('header/index.html')
     <main class="main container-back">
       <h1 class="title container">ANIMATION SCENE</h1>
 
-      <div class="breadcrumbs container">
-        <a class="breadcrumbs__link" href="/">Home</a>
-        <img class="breadcrumbs__img" src="/../../static/images/vector.png" alt="vector">
-        <span class="breadcrumbs__link_current">Animation</span>
-      </div>
+      <ul class="breadcrumbs container">
+        <li class="breadcrumbs__etem">
+          <a class="breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="breadcrumbs__etem">
+          <span class="breadcrumbs__link breadcrumbs__link_current">Animation</span>
+        </li>
+      </ul>
       
-      <div class="main-scene">
+      <div class="clouds">
         <img class="sun" src="/../../static/images/sun.png" alt="sun"/>
         <img class="cloud cloud-1" src="/../../static/images/cloud-1.png" alt="cloud 1"/>
         <img class="cloud cloud-2" src="/../../static/images/cloud-2.png" alt="cloud 2"/>
@@ -33,7 +39,9 @@
         <img class="cloud cloud-10" src="/../../static/images/cloud-4.png" alt="cloud 10"/>
         <img class="cloud cloud-11" src="/../../static/images/cloud-5.png" alt="cloud 11"/>
         <img class="cloud cloud-12" src="/../../static/images/cloud-6.png" alt="cloud 12"/>
-  
+      </div>
+
+      <div class="main-scene">
         <img class="town" src="/../../static/images/town.png" alt="town">
 
         <div class="cars">
@@ -53,17 +61,19 @@
         
         <img class="flashlight-3" src="/../../static/images/flashlight-1.png" alt="town">
         
-        <div  class="woman">
-          <img class="woman__body" src="/../../static/images/woman-1.png" alt="woman body"/>
-          <img class="woman__hand" src="/../../static/images/woman-hand.png" alt="woman hand"/>
-          <img class="woman__message" src="/../../static/images/woman-message.png" alt="woman message"/>
-        </div >
-        
-        <div class="man">
-          <img class="man__body" src="/../../static/images/man.png" alt="woman body"/>
-          <img class="man__message-one" src="/../../static/images/man-message-1.png" alt="man message 1"/>
-          <img class="man__message-two" src="/../../static/images/man-message-2.png" alt="man message 2"/>
-          <img class="man__hand" src="/../../static/images/man-hand-1.png" alt="woman hand"/>
+        <div class="passengers">
+          <div  class="woman">
+            <img class="woman__body" src="/../../static/images/woman-1.png" alt="woman body"/>
+            <img class="woman__hand" src="/../../static/images/woman-hand.png" alt="woman hand"/>
+            <img class="woman__message" src="/../../static/images/woman-message.png" alt="woman message"/>
+          </div >
+          
+          <div class="man">
+            <img class="man__body" src="/../../static/images/man.png" alt="woman body"/>
+            <img class="man__message-one" src="/../../static/images/man-message-1.png" alt="man message 1"/>
+            <img class="man__message-two" src="/../../static/images/man-message-2.png" alt="man message 2"/>
+            <img class="man__hand" src="/../../static/images/man-hand-1.png" alt="woman hand"/>
+          </div>
         </div>
       </div>
     </main>

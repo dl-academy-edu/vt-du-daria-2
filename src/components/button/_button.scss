@@ -13,6 +13,11 @@
   border: none;
   cursor: pointer;
 
+  @media (max-width: 450px) {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
   transition: background-color $transition-duration;
 
   &:hover {
@@ -21,5 +26,11 @@
   
   &:active {
     background-color: #CFAF91;
+  }
+
+  &:disabled {
+    background-color: #C1C1C1;
+    color: #E1E1E1;
+    cursor: initial;
   }
 }
